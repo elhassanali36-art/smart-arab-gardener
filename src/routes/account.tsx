@@ -16,7 +16,7 @@ export const Route = createFileRoute("/account")({
       { property: "og:description", content: "إدارة مدينتك ونباتاتك المفضلة وإعداداتك." },
     ],
   }),
-  component: Account;
+  component: Account,
 });
 
 function Account() {
