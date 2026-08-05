@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ChevronRight, Clock, Droplets, Sun, Layers, AlertTriangle, Heart } from "lucide-react";
 import {
   getPlant,
+  type Plant,
   seasonForMonth,
   seasonLabels,
   difficultyLabels,
@@ -38,7 +39,7 @@ export const Route = createFileRoute("/plants/$plantId")({
 });
 
 function PlantDetail() {
-  const { plant } = Route.useLoaderData();
+  const { plant } = Route.useLoaderData() as { plant: Plant };
   const { ids, toggle } = useFavorites();
   const season = seasonForMonth(new Date().getMonth() + 1);
   const seasonPests = plant.pests.find((p) => p.season === season);
