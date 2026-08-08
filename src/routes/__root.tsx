@@ -82,6 +82,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "المزارع الذكي" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { title: "المزارع الذكي — ماذا تزرع اليوم؟" },
+      { property: "og:title", content: "المزارع الذكي — ماذا تزرع اليوم؟" },
+      { name: "twitter:title", content: "المزارع الذكي — ماذا تزرع اليوم؟" },
+      { name: "description", content: "اعرف ما يمكنك زراعته الآن حسب موقعك وتاريخ اليوم والمناخ، مع دليل زراعة عربي مبسّط للهواة والمزارعين الصغار." },
+      { property: "og:description", content: "اعرف ما يمكنك زراعته الآن حسب موقعك وتاريخ اليوم والمناخ، مع دليل زراعة عربي مبسّط للهواة والمزارعين الصغار." },
+      { name: "twitter:description", content: "اعرف ما يمكنك زراعته الآن حسب موقعك وتاريخ اليوم والمناخ، مع دليل زراعة عربي مبسّط للهواة والمزارعين الصغار." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6ccf65c-5c50-46e0-9371-cdea9eca0d98/id-preview-2bf3a8c2--88feb0f3-4bdd-4a74-97aa-9131006ccbfa.lovable.app-1785902644799.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6ccf65c-5c50-46e0-9371-cdea9eca0d98/id-preview-2bf3a8c2--88feb0f3-4bdd-4a74-97aa-9131006ccbfa.lovable.app-1785902644799.png" },
     ],
     links: [
       {
