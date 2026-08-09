@@ -44,7 +44,7 @@ function Home() {
         <div className="surface-card p-4">
           <MapPin className="size-5 text-primary" />
           <p className="mt-3 text-[11px] font-semibold text-muted-foreground">الموقع الحالي</p>
-          <p className="mt-0.5 text-sm font-bold text-foreground">{DEFAULT_CITY}</p>
+          <p className="mt-0.5 text-sm font-bold text-foreground">{city}</p>
         </div>
         <div className="surface-card p-4">
           <CalendarDays className="size-5 text-gold-ink" />
