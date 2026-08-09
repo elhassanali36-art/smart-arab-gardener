@@ -5,6 +5,8 @@
  * استبدل `plants` بنتيجة نداء API (مثال: GET /api/plants) مع الحفاظ على
  * نفس شكل النوع `Plant` حتى لا تحتاج الواجهات إلى أي تعديل.
  */
+import { extraPlants } from "./plants-extra";
+
 
 export type Season = "winter" | "summer" | "moderate";
 export type SpaceType = "pots" | "garden" | "indoor";
