@@ -34,13 +34,17 @@ const tabs = [
 
 function Results() {
   const [tab, setTab] = useState<"all" | SpaceType>("all");
+  const [cat, setCat] = useState<Category | "any">("any");
   const { ids, toggle } = useFavorites();
 
   // يعتمد على تاريخ اليوم الفعلي في المتصفح
   const month = new Date().getMonth() + 1;
   const list = plantsForMonth(month).filter(
-    (p) => tab === "all" || p.spaces.includes(tab as SpaceType),
+    (p) =>
+      (tab === "all" || p.spaces.includes(tab as SpaceType)) &&
+      (cat === "any" || categoryOf(p) === cat),
   );
+
 
   return (
     <main className="px-4 pt-8">
