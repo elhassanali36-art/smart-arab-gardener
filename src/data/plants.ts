@@ -9,6 +9,15 @@
 export type Season = "winter" | "summer" | "moderate";
 export type SpaceType = "pots" | "garden" | "indoor";
 export type Difficulty = "easy" | "medium";
+/** تصنيف النبات — يُستخدم في البحث المتقدم */
+export type Category =
+  | "vegetable"
+  | "herb"
+  | "fruit-tree"
+  | "ornamental-tree"
+  | "shade-tree"
+  | "fodder"
+  | "flower";
 
 export interface Plant {
   id: string;
@@ -16,13 +25,15 @@ export interface Plant {
   nameEn: string;
   scientificName: string;
   emoji: string;
+  /** التصنيف (افتراضياً خضروات) */
+  category?: Category;
   /** المواسم المناسبة للزراعة */
   seasons: Season[];
   /** أشهر الزراعة الفعلية (1-12) */
   months: number[];
   spaces: SpaceType[];
   difficulty: Difficulty;
-  /** مدة النضج بالأيام (تقريبية) */
+  /** مدة النضج بالأيام (تقريبية) — للأشجار تعني مدة الإثمار الأولى */
   maturityDays: [number, number];
   water: string;
   sun: string;
@@ -32,6 +43,8 @@ export interface Plant {
   /** الأمراض والآفات حسب الموسم */
   pests: { season: Season; items: string[] }[];
   harvest: string[];
+  /** معلومات تثقيفية عن النبات (اختياري) */
+  facts?: string[];
 }
 
 export const seasonLabels: Record<Season, string> = {
@@ -46,10 +59,25 @@ export const spaceLabels: Record<SpaceType, string> = {
   indoor: "داخل المنزل",
 };
 
+export const categoryLabels: Record<Category, string> = {
+  vegetable: "خضروات",
+  herb: "أعشاب عطرية",
+  "fruit-tree": "أشجار مثمرة",
+  "ornamental-tree": "أشجار زينة",
+  "shade-tree": "أشجار ظليلة",
+  fodder: "أعلاف",
+  flower: "زهور وورود",
+};
+
+export function categoryOf(p: Plant): Category {
+  return p.category ?? "vegetable";
+}
+
 export const difficultyLabels: Record<Difficulty, string> = {
   easy: "سهل",
   medium: "متوسط",
 };
+
 
 export const plants: Plant[] = [
   {
