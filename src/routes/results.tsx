@@ -91,6 +91,28 @@ function Results() {
         ))}
       </div>
 
+      <div className="mt-3 -mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
+        {(["any", ...(Object.keys(categoryLabels) as Category[])] as (Category | "any")[]).map(
+          (k) => (
+            <button
+              key={k}
+              type="button"
+              onClick={() => setCat(k)}
+              className={cn(
+                "shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors",
+                cat === k
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-gold/40 bg-card text-foreground",
+              )}
+            >
+              {k === "any" ? "كل التصنيفات" : categoryLabels[k]}
+            </button>
+          ),
+        )}
+      </div>
+
+
+
       <div className="mt-4 space-y-3">
         {list.map((plant) => (
           <PlantCard
