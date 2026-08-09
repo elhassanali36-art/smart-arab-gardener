@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, CalendarDays, Sprout, ArrowLeft, Search } from "lucide-react";
-import { DEFAULT_CITY, formatToday } from "@/data/environment";
+import { formatToday } from "@/data/environment";
 import { trendingSearches } from "@/data/plants";
 import { WeatherBar } from "@/components/env-strip";
+import { useLiveWeather } from "@/hooks/use-live-weather";
 import { useProfile } from "@/hooks/use-app-store";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
