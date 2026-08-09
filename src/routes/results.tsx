@@ -3,7 +3,13 @@ import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { EnvStrip } from "@/components/env-strip";
 import { PlantCard } from "@/components/plant-card";
-import { plantsForMonth, type SpaceType } from "@/data/plants";
+import {
+  plantsForMonth,
+  categoryLabels,
+  categoryOf,
+  type SpaceType,
+  type Category,
+} from "@/data/plants";
 import { useFavorites } from "@/hooks/use-app-store";
 import { cn } from "@/lib/utils";
 
