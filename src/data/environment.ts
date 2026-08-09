@@ -17,11 +17,14 @@ export interface Weather {
 }
 
 export const DEFAULT_CITY = "الرياض، السعودية";
+/** إحداثيات الرياض — تُستخدم عند رفض إذن الموقع */
+export const RIYADH_COORDS = { lat: 24.7136, lon: 46.6753 };
 
+/** بيانات احتياطية فقط — الطقس الحقيقي في src/lib/weather.functions.ts */
 export function getWeather(): Weather {
-  // بيانات وهمية مؤقتة — تُستبدل بنداء API حقيقي
   return { tempC: 34, condition: "مشمس وجاف", humidity: 18, icon: "sun" };
 }
+
 
 const AR_MONTHS = [
   "يناير",
