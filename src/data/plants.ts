@@ -565,6 +565,11 @@ const corePlants: Plant[] = [
   },
 ];
 
+/** القائمة الكاملة: خضروات وأعشاب + أشجار وأعلاف وزهور */
+export const plants: Plant[] = [...corePlants, ...extraPlants];
+
+
+
 /** الشهر (1-12) → الموسم الزراعي المناسب في مناخ الخليج/الرياض */
 export function seasonForMonth(month: number): Season {
   if ([12, 1, 2].includes(month)) return "winter";
