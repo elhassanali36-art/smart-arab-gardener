@@ -163,6 +163,20 @@ function PlantDetail() {
           ))}
         </ul>
       </Section>
+
+      {plant.facts && plant.facts.length > 0 && (
+        <Section title="معلومات تثقيفية عن النبات">
+          <ul className="space-y-2.5">
+            {plant.facts.map((f) => (
+              <li key={f} className="flex gap-2 text-sm leading-relaxed text-foreground">
+                <BookOpen className="mt-0.5 size-4 shrink-0 text-gold-ink" />
+                {f}
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
     </main>
   );
 }
