@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, CalendarDays, Sprout, ArrowLeft, Search } from "lucide-react";
-import { DEFAULT_CITY, formatToday } from "@/data/environment";
+import { formatToday } from "@/data/environment";
 import { trendingSearches } from "@/data/plants";
 import { WeatherBar } from "@/components/env-strip";
+import { useLiveWeather } from "@/hooks/use-live-weather";
 import { useProfile } from "@/hooks/use-app-store";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,6 +28,8 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const { profile } = useProfile();
+  const { city } = useLiveWeather();
+
 
   return (
     <main className="px-4 pt-8">
@@ -40,7 +44,7 @@ function Home() {
         <div className="surface-card p-4">
           <MapPin className="size-5 text-primary" />
           <p className="mt-3 text-[11px] font-semibold text-muted-foreground">الموقع الحالي</p>
-          <p className="mt-0.5 text-sm font-bold text-foreground">{DEFAULT_CITY}</p>
+          <p className="mt-0.5 text-sm font-bold text-foreground">{city}</p>
         </div>
         <div className="surface-card p-4">
           <CalendarDays className="size-5 text-gold-ink" />

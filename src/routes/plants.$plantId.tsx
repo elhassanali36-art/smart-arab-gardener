@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ChevronRight, Clock, Droplets, Sun, Layers, AlertTriangle, Heart } from "lucide-react";
+import { ChevronRight, Clock, Droplets, Sun, Layers, AlertTriangle, Heart, BookOpen } from "lucide-react";
 import {
   getPlant,
   type Plant,
@@ -7,6 +7,8 @@ import {
   seasonLabels,
   difficultyLabels,
   spaceLabels,
+  categoryLabels,
+  categoryOf,
 } from "@/data/plants";
 import { useFavorites } from "@/hooks/use-app-store";
 import { cn } from "@/lib/utils";
@@ -81,9 +83,13 @@ function PlantDetail() {
         </h1>
         <p className="text-xs italic text-muted-foreground">{plant.scientificName}</p>
         <div className="mt-3 flex flex-wrap justify-center gap-2">
+          <span className="rounded-full bg-gold/25 px-3 py-1 text-[11px] font-bold text-gold-ink">
+            {categoryLabels[categoryOf(plant)]}
+          </span>
           <span className="rounded-full bg-primary/12 px-3 py-1 text-[11px] font-bold text-primary">
             {difficultyLabels[plant.difficulty]}
           </span>
+
           {plant.seasons.map((s) => (
             <span
               key={s}
@@ -163,6 +169,20 @@ function PlantDetail() {
           ))}
         </ul>
       </Section>
+
+      {plant.facts && plant.facts.length > 0 && (
+        <Section title="معلومات تثقيفية عن النبات">
+          <ul className="space-y-2.5">
+            {plant.facts.map((f) => (
+              <li key={f} className="flex gap-2 text-sm leading-relaxed text-foreground">
+                <BookOpen className="mt-0.5 size-4 shrink-0 text-gold-ink" />
+                {f}
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
     </main>
   );
 }

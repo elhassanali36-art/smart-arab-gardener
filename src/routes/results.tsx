@@ -3,7 +3,13 @@ import { useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { EnvStrip } from "@/components/env-strip";
 import { PlantCard } from "@/components/plant-card";
-import { plantsForMonth, type SpaceType } from "@/data/plants";
+import {
+  plantsForMonth,
+  categoryLabels,
+  categoryOf,
+  type SpaceType,
+  type Category,
+} from "@/data/plants";
 import { useFavorites } from "@/hooks/use-app-store";
 import { cn } from "@/lib/utils";
 
@@ -34,13 +40,17 @@ const tabs = [
 
 function Results() {
   const [tab, setTab] = useState<"all" | SpaceType>("all");
+  const [cat, setCat] = useState<Category | "any">("any");
   const { ids, toggle } = useFavorites();
 
   // يعتمد على تاريخ اليوم الفعلي في المتصفح
   const month = new Date().getMonth() + 1;
   const list = plantsForMonth(month).filter(
-    (p) => tab === "all" || p.spaces.includes(tab as SpaceType),
+    (p) =>
+      (tab === "all" || p.spaces.includes(tab as SpaceType)) &&
+      (cat === "any" || categoryOf(p) === cat),
   );
+
 
   return (
     <main className="px-4 pt-8">
@@ -80,6 +90,28 @@ function Results() {
           </button>
         ))}
       </div>
+
+      <div className="mt-3 -mx-4 flex gap-2 overflow-x-auto px-4 pb-1">
+        {(["any", ...(Object.keys(categoryLabels) as Category[])] as (Category | "any")[]).map(
+          (k) => (
+            <button
+              key={k}
+              type="button"
+              onClick={() => setCat(k)}
+              className={cn(
+                "shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors",
+                cat === k
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-gold/40 bg-card text-foreground",
+              )}
+            >
+              {k === "any" ? "كل التصنيفات" : categoryLabels[k]}
+            </button>
+          ),
+        )}
+      </div>
+
+
 
       <div className="mt-4 space-y-3">
         {list.map((plant) => (
