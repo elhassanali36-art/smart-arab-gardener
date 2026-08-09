@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ChevronRight, Clock, Droplets, Sun, Layers, AlertTriangle, Heart } from "lucide-react";
+import { ChevronRight, Clock, Droplets, Sun, Layers, AlertTriangle, Heart, BookOpen } from "lucide-react";
 import {
   getPlant,
   type Plant,
@@ -7,6 +7,8 @@ import {
   seasonLabels,
   difficultyLabels,
   spaceLabels,
+  categoryLabels,
+  categoryOf,
 } from "@/data/plants";
 import { useFavorites } from "@/hooks/use-app-store";
 import { cn } from "@/lib/utils";
