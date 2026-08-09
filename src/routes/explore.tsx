@@ -71,6 +71,7 @@ function Explore() {
   const [season, setSeason] = useState<Season | "any">("any");
   const [maturity, setMaturity] = useState<MaturityKey>("any");
   const [difficulty, setDifficulty] = useState<Difficulty | "any">("any");
+  const [sort, setSort] = useState<SortKey>("relevance");
   const [applied, setApplied] = useState(0);
 
   const results = useMemo(() => {
@@ -96,17 +97,14 @@ function Explore() {
       return true;
     });
 
-    const [sortKey] = [sortRef.current];
     const sorted = [...list];
-    if (sortKey === "fastest") sorted.sort((a, b) => a.maturityDays[0] - b.maturityDays[0]);
-    if (sortKey === "slowest") sorted.sort((a, b) => b.maturityDays[1] - a.maturityDays[1]);
-    if (sortKey === "name") sorted.sort((a, b) => a.nameAr.localeCompare(b.nameAr, "ar"));
+    if (sort === "fastest") sorted.sort((a, b) => a.maturityDays[0] - b.maturityDays[0]);
+    if (sort === "slowest") sorted.sort((a, b) => b.maturityDays[1] - a.maturityDays[1]);
+    if (sort === "name") sorted.sort((a, b) => a.nameAr.localeCompare(b.nameAr, "ar"));
     return sorted;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [q, applied]);
+  }, [q, applied, sort]);
 
-  const [sort, setSort] = useState<SortKey>("relevance");
-  const sortRef = { current: sort };
 
   const apply = () => {
     navigate({ to: "/explore", search: query ? { q: query } : {} });
