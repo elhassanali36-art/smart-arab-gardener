@@ -28,6 +28,8 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   const { profile } = useProfile();
+  const { city } = useLiveWeather();
+
 
   return (
     <main className="px-4 pt-8">
