@@ -79,7 +79,7 @@ export const difficultyLabels: Record<Difficulty, string> = {
 };
 
 
-export const plants: Plant[] = [
+const corePlants: Plant[] = [
   {
     id: "tomato",
     nameAr: "طماطم",
