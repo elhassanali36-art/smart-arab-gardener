@@ -1,5 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MapPin, CalendarDays, Sprout, ArrowLeft, Search } from "lucide-react";
+import {
+  MapPin,
+  CalendarDays,
+  Sprout,
+  ArrowLeft,
+  Search,
+  Warehouse,
+  Recycle,
+} from "lucide-react";
 import { formatToday } from "@/data/environment";
 import { trendingSearches } from "@/data/plants";
 import { WeatherBar } from "@/components/env-strip";
@@ -69,6 +77,40 @@ function Home() {
         </span>
         <ArrowLeft className="size-5" />
       </Link>
+
+      <section className="mt-4 grid gap-3">
+        <Link
+          to="/expert"
+          className="surface-card flex items-center gap-3 p-4 transition-shadow hover:shadow-lifted"
+        >
+          <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-primary/10">
+            <Sprout className="size-5 text-primary" />
+          </span>
+          <span className="flex-1">
+            <span className="block text-sm font-bold text-foreground">
+              اسأل الخبير عن أي نبات
+            </span>
+            <span className="block text-[11px] text-muted-foreground">
+              زراعته، أسمدته، أمراضه وعلاجها — بعدة لغات
+            </span>
+          </span>
+          <ArrowLeft className="size-4 text-muted-foreground" />
+        </Link>
+
+        <div className="grid grid-cols-2 gap-3">
+          <Link to="/greenhouse" className="surface-card p-4">
+            <Warehouse className="size-5 text-primary" />
+            <p className="mt-3 text-sm font-bold text-foreground">البيوت المحمية</p>
+            <p className="text-[11px] text-muted-foreground">الإنشاء والفوائد</p>
+          </Link>
+          <Link to="/compost" className="surface-card p-4">
+            <Recycle className="size-5 text-gold-ink" />
+            <p className="mt-3 text-sm font-bold text-foreground">صناعة الكمبوست</p>
+            <p className="text-[11px] text-muted-foreground">المواد والخطوات</p>
+          </Link>
+        </div>
+      </section>
+
 
       <section className="mt-8">
         <h2 className="mb-3 font-display text-base font-bold text-foreground">
