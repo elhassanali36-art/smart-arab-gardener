@@ -3,6 +3,8 @@ import { useState } from "react";
 import { MapPin, Languages, ChevronLeft, Leaf } from "lucide-react";
 import { plants } from "@/data/plants";
 import { useFavorites, useProfile } from "@/hooks/use-app-store";
+import { languages, useI18n } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/account")({
   head: () => ({
@@ -102,17 +104,44 @@ function Account() {
             )}
           </div>
           <div className="gold-divider" />
-          <div className="flex items-center justify-between px-3 py-3">
+          <div className="px-3 py-3">
             <span className="inline-flex items-center gap-2 text-sm font-bold text-foreground">
               <Languages className="size-4 text-gold-ink" />
-              تغيير اللغة
+              {t("language")}
             </span>
-            <span className="text-[11px] font-semibold text-muted-foreground">
-              العربية (قريباً)
-            </span>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {languages.map((l) => (
+                <button
+                  key={l.code}
+                  type="button"
+                  onClick={() => setLang(l.code)}
+                  className={cn(
+                    "rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors",
+                    lang === l.code
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : "border-gold/40 bg-card text-foreground",
+                  )}
+                >
+                  {l.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      <section className="mt-6">
+        <h2 className="mb-3 font-display text-base font-bold text-foreground">أقسام تعليمية</h2>
+        <div className="grid grid-cols-2 gap-3">
+          <Link to="/greenhouse" className="surface-card p-4 text-sm font-bold text-foreground">
+            {t("greenhouse.title")}
+          </Link>
+          <Link to="/compost" className="surface-card p-4 text-sm font-bold text-foreground">
+            {t("compost.title")}
+          </Link>
+        </div>
+      </section>
+
     </main>
   );
 }
