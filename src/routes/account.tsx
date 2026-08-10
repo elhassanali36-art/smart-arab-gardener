@@ -24,6 +24,7 @@ export const Route = createFileRoute("/account")({
 function Account() {
   const { profile, save } = useProfile();
   const { ids } = useFavorites();
+  const { t, lang, setLang } = useI18n();
   const [editing, setEditing] = useState(false);
   const [city, setCity] = useState(profile.city);
 
