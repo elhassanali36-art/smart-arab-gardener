@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AccountRouteImport } from './routes/account'
+import { Route as ExpertRouteImport } from './routes/expert'
 import { Route as ExploreRouteImport } from './routes/explore'
 import { Route as FavoritesRouteImport } from './routes/favorites'
 import { Route as ResultsRouteImport } from './routes/results'
@@ -24,6 +25,11 @@ const IndexRoute = IndexRouteImport.update({
 const AccountRoute = AccountRouteImport.update({
   id: '/account',
   path: '/account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExpertRoute = ExpertRouteImport.update({
+  id: '/expert',
+  path: '/expert',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExploreRoute = ExploreRouteImport.update({
@@ -50,6 +56,7 @@ const PlantsPlantIdRoute = PlantsPlantIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/expert': typeof ExpertRoute
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
   '/results': typeof ResultsRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/expert': typeof ExpertRoute
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
   '/results': typeof ResultsRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/expert': typeof ExpertRoute
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
   '/results': typeof ResultsRoute
@@ -77,6 +86,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/account'
+    | '/expert'
     | '/explore'
     | '/favorites'
     | '/results'
@@ -85,6 +95,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/account'
+    | '/expert'
     | '/explore'
     | '/favorites'
     | '/results'
@@ -93,6 +104,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/account'
+    | '/expert'
     | '/explore'
     | '/favorites'
     | '/results'
@@ -102,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AccountRoute: typeof AccountRoute
+  ExpertRoute: typeof ExpertRoute
   ExploreRoute: typeof ExploreRoute
   FavoritesRoute: typeof FavoritesRoute
   ResultsRoute: typeof ResultsRoute
@@ -122,6 +135,13 @@ declare module '@tanstack/react-router' {
       path: '/account'
       fullPath: '/account'
       preLoaderRoute: typeof AccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/expert': {
+      id: '/expert'
+      path: '/expert'
+      fullPath: '/expert'
+      preLoaderRoute: typeof ExpertRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/explore': {
@@ -158,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AccountRoute: AccountRoute,
+  ExpertRoute: ExpertRoute,
   ExploreRoute: ExploreRoute,
   FavoritesRoute: FavoritesRoute,
   ResultsRoute: ResultsRoute,
@@ -166,13 +187,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
