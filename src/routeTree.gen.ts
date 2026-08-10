@@ -11,8 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AccountRouteImport } from './routes/account'
+import { Route as CompostRouteImport } from './routes/compost'
+import { Route as ExpertRouteImport } from './routes/expert'
 import { Route as ExploreRouteImport } from './routes/explore'
 import { Route as FavoritesRouteImport } from './routes/favorites'
+import { Route as GreenhouseRouteImport } from './routes/greenhouse'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as PlantsPlantIdRouteImport } from './routes/plants.$plantId'
 
@@ -26,6 +29,16 @@ const AccountRoute = AccountRouteImport.update({
   path: '/account',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompostRoute = CompostRouteImport.update({
+  id: '/compost',
+  path: '/compost',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExpertRoute = ExpertRouteImport.update({
+  id: '/expert',
+  path: '/expert',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ExploreRoute = ExploreRouteImport.update({
   id: '/explore',
   path: '/explore',
@@ -34,6 +47,11 @@ const ExploreRoute = ExploreRouteImport.update({
 const FavoritesRoute = FavoritesRouteImport.update({
   id: '/favorites',
   path: '/favorites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GreenhouseRoute = GreenhouseRouteImport.update({
+  id: '/greenhouse',
+  path: '/greenhouse',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResultsRoute = ResultsRouteImport.update({
@@ -50,16 +68,22 @@ const PlantsPlantIdRoute = PlantsPlantIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/compost': typeof CompostRoute
+  '/expert': typeof ExpertRoute
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
+  '/greenhouse': typeof GreenhouseRoute
   '/results': typeof ResultsRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/compost': typeof CompostRoute
+  '/expert': typeof ExpertRoute
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
+  '/greenhouse': typeof GreenhouseRoute
   '/results': typeof ResultsRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
 }
@@ -67,8 +91,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/compost': typeof CompostRoute
+  '/expert': typeof ExpertRoute
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
+  '/greenhouse': typeof GreenhouseRoute
   '/results': typeof ResultsRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
 }
@@ -77,24 +104,33 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/account'
+    | '/compost'
+    | '/expert'
     | '/explore'
     | '/favorites'
+    | '/greenhouse'
     | '/results'
     | '/plants/$plantId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/account'
+    | '/compost'
+    | '/expert'
     | '/explore'
     | '/favorites'
+    | '/greenhouse'
     | '/results'
     | '/plants/$plantId'
   id:
     | '__root__'
     | '/'
     | '/account'
+    | '/compost'
+    | '/expert'
     | '/explore'
     | '/favorites'
+    | '/greenhouse'
     | '/results'
     | '/plants/$plantId'
   fileRoutesById: FileRoutesById
@@ -102,8 +138,11 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AccountRoute: typeof AccountRoute
+  CompostRoute: typeof CompostRoute
+  ExpertRoute: typeof ExpertRoute
   ExploreRoute: typeof ExploreRoute
   FavoritesRoute: typeof FavoritesRoute
+  GreenhouseRoute: typeof GreenhouseRoute
   ResultsRoute: typeof ResultsRoute
   PlantsPlantIdRoute: typeof PlantsPlantIdRoute
 }
@@ -124,6 +163,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AccountRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/compost': {
+      id: '/compost'
+      path: '/compost'
+      fullPath: '/compost'
+      preLoaderRoute: typeof CompostRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/expert': {
+      id: '/expert'
+      path: '/expert'
+      fullPath: '/expert'
+      preLoaderRoute: typeof ExpertRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/explore': {
       id: '/explore'
       path: '/explore'
@@ -136,6 +189,13 @@ declare module '@tanstack/react-router' {
       path: '/favorites'
       fullPath: '/favorites'
       preLoaderRoute: typeof FavoritesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/greenhouse': {
+      id: '/greenhouse'
+      path: '/greenhouse'
+      fullPath: '/greenhouse'
+      preLoaderRoute: typeof GreenhouseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/results': {
@@ -158,8 +218,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AccountRoute: AccountRoute,
+  CompostRoute: CompostRoute,
+  ExpertRoute: ExpertRoute,
   ExploreRoute: ExploreRoute,
   FavoritesRoute: FavoritesRoute,
+  GreenhouseRoute: GreenhouseRoute,
   ResultsRoute: ResultsRoute,
   PlantsPlantIdRoute: PlantsPlantIdRoute,
 }

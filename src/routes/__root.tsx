@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { BottomNav } from "@/components/bottom-nav";
+import { LanguageProvider } from "@/lib/i18n";
 
 
 function NotFoundComponent() {
@@ -130,12 +131,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="mx-auto min-h-screen w-full max-w-md pb-24">
-        {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-        <Outlet />
-      </div>
-      <BottomNav />
+      <LanguageProvider>
+        <div className="mx-auto min-h-screen w-full max-w-md pb-24">
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </div>
+        <BottomNav />
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }
+
 
