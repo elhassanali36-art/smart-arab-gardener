@@ -21,7 +21,7 @@ export const Route = createFileRoute("/vertical")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Vertical;
+  component: Vertical,
 });
 
 function Vertical() {
