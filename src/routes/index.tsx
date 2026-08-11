@@ -7,6 +7,8 @@ import {
   Search,
   Warehouse,
   Recycle,
+  Droplets,
+  Columns3,
 } from "lucide-react";
 import { formatToday } from "@/data/environment";
 import { trendingSearches } from "@/data/plants";
@@ -107,6 +109,16 @@ function Home() {
             <Recycle className="size-5 text-gold-ink" />
             <p className="mt-3 text-sm font-bold text-foreground">صناعة الكمبوست</p>
             <p className="text-[11px] text-muted-foreground">المواد والخطوات</p>
+          </Link>
+          <Link to="/hydroponics" className="surface-card p-4">
+            <Droplets className="size-5 text-primary" />
+            <p className="mt-3 text-sm font-bold text-foreground">الزراعة المائية</p>
+            <p className="text-[11px] text-muted-foreground">بدون تربة ومياه أقل</p>
+          </Link>
+          <Link to="/vertical" className="surface-card p-4">
+            <Columns3 className="size-5 text-gold-ink" />
+            <p className="mt-3 text-sm font-bold text-foreground">الزراعة في أعمدة</p>
+            <p className="text-[11px] text-muted-foreground">أبراج وجدران خضراء</p>
           </Link>
         </div>
       </section>
