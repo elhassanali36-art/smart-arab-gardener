@@ -62,6 +62,14 @@ const ar: Dict = {
   "home.expertCard": "اسأل الخبير عن أي نبات",
   "home.greenhouseCard": "زراعة البيوت المحمية",
   "home.compostCard": "صناعة الكمبوست",
+  "hydro.title": "الزراعة المائية",
+  "hydro.subtitle": "ازرع بدون تربة بمياه أقل ونمو أسرع — الأنظمة والخطوات والمحاصيل.",
+  "vertical.title": "الزراعة في أعمدة (العمودية)",
+  "vertical.subtitle": "استغل الارتفاع: أعمدة وأبراج تنتج أضعاف المساحة الأفقية.",
+  "home.hydroCard": "الزراعة المائية",
+  "home.verticalCard": "الزراعة في أعمدة",
+  "nav.hydro": "مائية",
+  "nav.vertical": "أعمدة",
 };
 
 const en: Dict = {
@@ -104,6 +112,14 @@ const en: Dict = {
   "home.expertCard": "Ask the expert about any plant",
   "home.greenhouseCard": "Greenhouse growing",
   "home.compostCard": "Making compost",
+  "hydro.title": "Hydroponic growing",
+  "hydro.subtitle": "Grow without soil using less water and faster growth — systems, steps and crops.",
+  "vertical.title": "Vertical / column farming",
+  "vertical.subtitle": "Use height instead of area: columns and towers that multiply your yield.",
+  "home.hydroCard": "Hydroponics",
+  "home.verticalCard": "Column farming",
+  "nav.hydro": "Hydro",
+  "nav.vertical": "Vertical",
 };
 
 const fr: Dict = {

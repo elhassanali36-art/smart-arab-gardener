@@ -41,7 +41,7 @@ export const Route = createFileRoute("/expert")({
   component: Expert,
 });
 
-const suggestions = ["طماطم", "مانجو", "قمح", "ورد جوري", "زيتون", "نعناع"];
+const suggestions = ["طماطم", "كاجو", "مانجو", "قمح", "ورد جوري", "زيتون", "نعناع", "قهوة"];
 
 function Expert() {
   const { t, lang } = useI18n();

@@ -42,6 +42,15 @@ export const languageNames: Record<string, string> = {
   es: "Spanish",
   ur: "Urdu",
   hi: "Hindi",
+  pt: "Portuguese",
+  de: "German",
+  tr: "Turkish",
+  ru: "Russian",
+  zh: "Simplified Chinese",
+  id: "Indonesian",
+  sw: "Swahili",
+  bn: "Bengali",
+  fa: "Persian (Farsi)",
 };
 
 export function expertSystemPrompt(language: string) {
@@ -53,6 +62,11 @@ export function expertSystemPrompt(language: string) {
     "Be specific: real fertilizer products/NPK ratios, real pest and disease names,",
     "concrete organic and chemical treatment options with safety notes, and clear timing.",
     "Give 6 to 9 planting steps, at least 4 diseases/pests, and at least 4 fertilizer entries.",
+    "Cover EVERY kind of plant with equal depth: vegetables, herbs, cereals, fodder, flowers,",
+    "ornamental and shade trees, and perennial tree crops and nuts such as cashew, mango,",
+    "almond, pistachio, olive, coffee, cocoa, date palm and citrus. For tree and nut crops give",
+    "propagation (seed/graft), spacing, years to first yield, pruning and pollination details in the steps.",
+    "Also mention whether the plant suits hydroponics or vertical/column growing, and how, in the greenhouse notes.",
     "If the input is not a plant, answer for the closest matching plant and say so in the summary.",
   ].join(" ");
 }
