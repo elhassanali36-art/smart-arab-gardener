@@ -16,6 +16,7 @@ import { Route as ExpertRouteImport } from './routes/expert'
 import { Route as ExploreRouteImport } from './routes/explore'
 import { Route as FavoritesRouteImport } from './routes/favorites'
 import { Route as GreenhouseRouteImport } from './routes/greenhouse'
+import { Route as HydroponicsRouteImport } from './routes/hydroponics'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as PlantsPlantIdRouteImport } from './routes/plants.$plantId'
 
@@ -54,6 +55,11 @@ const GreenhouseRoute = GreenhouseRouteImport.update({
   path: '/greenhouse',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HydroponicsRoute = HydroponicsRouteImport.update({
+  id: '/hydroponics',
+  path: '/hydroponics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResultsRoute = ResultsRouteImport.update({
   id: '/results',
   path: '/results',
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
   '/greenhouse': typeof GreenhouseRoute
+  '/hydroponics': typeof HydroponicsRoute
   '/results': typeof ResultsRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
 }
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
   '/greenhouse': typeof GreenhouseRoute
+  '/hydroponics': typeof HydroponicsRoute
   '/results': typeof ResultsRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
 }
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
   '/greenhouse': typeof GreenhouseRoute
+  '/hydroponics': typeof HydroponicsRoute
   '/results': typeof ResultsRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
 }
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/explore'
     | '/favorites'
     | '/greenhouse'
+    | '/hydroponics'
     | '/results'
     | '/plants/$plantId'
   fileRoutesByTo: FileRoutesByTo
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/explore'
     | '/favorites'
     | '/greenhouse'
+    | '/hydroponics'
     | '/results'
     | '/plants/$plantId'
   id:
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/explore'
     | '/favorites'
     | '/greenhouse'
+    | '/hydroponics'
     | '/results'
     | '/plants/$plantId'
   fileRoutesById: FileRoutesById
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   ExploreRoute: typeof ExploreRoute
   FavoritesRoute: typeof FavoritesRoute
   GreenhouseRoute: typeof GreenhouseRoute
+  HydroponicsRoute: typeof HydroponicsRoute
   ResultsRoute: typeof ResultsRoute
   PlantsPlantIdRoute: typeof PlantsPlantIdRoute
 }
@@ -198,6 +211,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GreenhouseRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hydroponics': {
+      id: '/hydroponics'
+      path: '/hydroponics'
+      fullPath: '/hydroponics'
+      preLoaderRoute: typeof HydroponicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/results': {
       id: '/results'
       path: '/results'
@@ -223,19 +243,10 @@ const rootRouteChildren: RootRouteChildren = {
   ExploreRoute: ExploreRoute,
   FavoritesRoute: FavoritesRoute,
   GreenhouseRoute: GreenhouseRoute,
+  HydroponicsRoute: HydroponicsRoute,
   ResultsRoute: ResultsRoute,
   PlantsPlantIdRoute: PlantsPlantIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
