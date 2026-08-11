@@ -7,6 +7,8 @@ import {
   Search,
   Warehouse,
   Recycle,
+  Droplets,
+  Columns3,
 } from "lucide-react";
 import { formatToday } from "@/data/environment";
 import { trendingSearches } from "@/data/plants";
