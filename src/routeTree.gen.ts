@@ -18,6 +18,7 @@ import { Route as FavoritesRouteImport } from './routes/favorites'
 import { Route as GreenhouseRouteImport } from './routes/greenhouse'
 import { Route as HydroponicsRouteImport } from './routes/hydroponics'
 import { Route as ResultsRouteImport } from './routes/results'
+import { Route as VerticalRouteImport } from './routes/vertical'
 import { Route as PlantsPlantIdRouteImport } from './routes/plants.$plantId'
 
 const IndexRoute = IndexRouteImport.update({
@@ -65,6 +66,11 @@ const ResultsRoute = ResultsRouteImport.update({
   path: '/results',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VerticalRoute = VerticalRouteImport.update({
+  id: '/vertical',
+  path: '/vertical',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlantsPlantIdRoute = PlantsPlantIdRouteImport.update({
   id: '/plants/$plantId',
   path: '/plants/$plantId',
@@ -81,6 +87,7 @@ export interface FileRoutesByFullPath {
   '/greenhouse': typeof GreenhouseRoute
   '/hydroponics': typeof HydroponicsRoute
   '/results': typeof ResultsRoute
+  '/vertical': typeof VerticalRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
 }
 export interface FileRoutesByTo {
@@ -93,6 +100,7 @@ export interface FileRoutesByTo {
   '/greenhouse': typeof GreenhouseRoute
   '/hydroponics': typeof HydroponicsRoute
   '/results': typeof ResultsRoute
+  '/vertical': typeof VerticalRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
 }
 export interface FileRoutesById {
@@ -106,6 +114,7 @@ export interface FileRoutesById {
   '/greenhouse': typeof GreenhouseRoute
   '/hydroponics': typeof HydroponicsRoute
   '/results': typeof ResultsRoute
+  '/vertical': typeof VerticalRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
 }
 export interface FileRouteTypes {
@@ -120,6 +129,7 @@ export interface FileRouteTypes {
     | '/greenhouse'
     | '/hydroponics'
     | '/results'
+    | '/vertical'
     | '/plants/$plantId'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -132,6 +142,7 @@ export interface FileRouteTypes {
     | '/greenhouse'
     | '/hydroponics'
     | '/results'
+    | '/vertical'
     | '/plants/$plantId'
   id:
     | '__root__'
@@ -144,6 +155,7 @@ export interface FileRouteTypes {
     | '/greenhouse'
     | '/hydroponics'
     | '/results'
+    | '/vertical'
     | '/plants/$plantId'
   fileRoutesById: FileRoutesById
 }
@@ -157,6 +169,7 @@ export interface RootRouteChildren {
   GreenhouseRoute: typeof GreenhouseRoute
   HydroponicsRoute: typeof HydroponicsRoute
   ResultsRoute: typeof ResultsRoute
+  VerticalRoute: typeof VerticalRoute
   PlantsPlantIdRoute: typeof PlantsPlantIdRoute
 }
 
@@ -225,6 +238,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResultsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/vertical': {
+      id: '/vertical'
+      path: '/vertical'
+      fullPath: '/vertical'
+      preLoaderRoute: typeof VerticalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/plants/$plantId': {
       id: '/plants/$plantId'
       path: '/plants/$plantId'
@@ -245,6 +265,7 @@ const rootRouteChildren: RootRouteChildren = {
   GreenhouseRoute: GreenhouseRoute,
   HydroponicsRoute: HydroponicsRoute,
   ResultsRoute: ResultsRoute,
+  VerticalRoute: VerticalRoute,
   PlantsPlantIdRoute: PlantsPlantIdRoute,
 }
 export const routeTree = rootRouteImport
