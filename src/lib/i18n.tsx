@@ -174,7 +174,158 @@ const hi: Dict = {
   "language": "भाषा",
 };
 
-const dicts: Record<LangCode, Dict> = { ar, en, fr, es, ur, hi };
+const pt: Dict = {
+  ...en,
+  "nav.home": "Início",
+  "nav.expert": "Especialista",
+  "nav.explore": "Explorar",
+  "nav.favorites": "Favoritos",
+  "nav.account": "Conta",
+  "expert.title": "Pergunte ao especialista agrícola",
+  "expert.subtitle": "Digite qualquer planta e receba um guia completo: passos, adubos, doenças e tratamentos.",
+  "expert.placeholder": "ex. tomate, manga, caju, rosa…",
+  "expert.button": "Ver o guia",
+  "expert.loading": "Preparando o guia…",
+  "language": "Idioma",
+};
+
+const de: Dict = {
+  ...en,
+  "nav.home": "Start",
+  "nav.expert": "Experte",
+  "nav.explore": "Entdecken",
+  "nav.favorites": "Favoriten",
+  "nav.account": "Konto",
+  "expert.title": "Frag den Anbau-Experten",
+  "expert.subtitle": "Gib eine Pflanze ein und erhalte einen vollständigen Anbauleitfaden: Schritte, Dünger, Krankheiten und Behandlung.",
+  "expert.placeholder": "z. B. Tomate, Mango, Cashew, Rose…",
+  "expert.button": "Leitfaden anzeigen",
+  "expert.loading": "Leitfaden wird erstellt…",
+  "language": "Sprache",
+};
+
+const tr: Dict = {
+  ...en,
+  "nav.home": "Ana sayfa",
+  "nav.expert": "Uzman",
+  "nav.explore": "Keşfet",
+  "nav.favorites": "Favoriler",
+  "nav.account": "Hesap",
+  "expert.title": "Tarım uzmanına sor",
+  "expert.subtitle": "Herhangi bir bitki adı yaz, tam yetiştirme rehberi al: adımlar, gübreler, hastalıklar ve tedavi.",
+  "expert.placeholder": "örn. domates, mango, kaju, gül…",
+  "expert.button": "Rehberi getir",
+  "expert.loading": "Rehber hazırlanıyor…",
+  "language": "Dil",
+};
+
+const ru: Dict = {
+  ...en,
+  "nav.home": "Главная",
+  "nav.expert": "Эксперт",
+  "nav.explore": "Поиск",
+  "nav.favorites": "Избранное",
+  "nav.account": "Профиль",
+  "expert.title": "Спросите агронома",
+  "expert.subtitle": "Введите любое растение и получите полное руководство: шаги, удобрения, болезни и лечение.",
+  "expert.placeholder": "напр. томат, манго, кешью, роза…",
+  "expert.button": "Получить руководство",
+  "expert.loading": "Готовим руководство…",
+  "language": "Язык",
+};
+
+const zh: Dict = {
+  ...en,
+  "nav.home": "首页",
+  "nav.expert": "专家",
+  "nav.explore": "探索",
+  "nav.favorites": "收藏",
+  "nav.account": "账户",
+  "expert.title": "请教种植专家",
+  "expert.subtitle": "输入任何植物名称，获取完整种植指南：步骤、肥料、病虫害与防治。",
+  "expert.placeholder": "例如：番茄、芒果、腰果、玫瑰…",
+  "expert.button": "获取指南",
+  "expert.loading": "正在生成指南…",
+  "language": "语言",
+};
+
+const id: Dict = {
+  ...en,
+  "nav.home": "Beranda",
+  "nav.expert": "Ahli",
+  "nav.explore": "Jelajahi",
+  "nav.favorites": "Favorit",
+  "nav.account": "Akun",
+  "expert.title": "Tanya ahli pertanian",
+  "expert.subtitle": "Tulis nama tanaman apa pun dan dapatkan panduan lengkap: langkah, pupuk, penyakit dan pengobatan.",
+  "expert.placeholder": "mis. tomat, mangga, jambu monyet, mawar…",
+  "expert.button": "Lihat panduan",
+  "expert.loading": "Menyiapkan panduan…",
+  "language": "Bahasa",
+};
+
+const sw: Dict = {
+  ...en,
+  "nav.home": "Mwanzo",
+  "nav.expert": "Mtaalam",
+  "nav.explore": "Tafuta",
+  "nav.favorites": "Vipendwa",
+  "nav.account": "Akaunti",
+  "expert.title": "Muulize mtaalam wa kilimo",
+  "expert.subtitle": "Andika jina la mmea wowote upate mwongozo kamili: hatua, mbolea, magonjwa na tiba.",
+  "expert.placeholder": "mf. nyanya, embe, korosho, waridi…",
+  "expert.button": "Pata mwongozo",
+  "expert.loading": "Tunatayarisha mwongozo…",
+  "language": "Lugha",
+};
+
+const bn: Dict = {
+  ...en,
+  "nav.home": "হোম",
+  "nav.expert": "বিশেষজ্ঞ",
+  "nav.explore": "খুঁজুন",
+  "nav.favorites": "প্রিয়",
+  "nav.account": "অ্যাকাউন্ট",
+  "expert.title": "কৃষি বিশেষজ্ঞকে জিজ্ঞাসা করুন",
+  "expert.subtitle": "যেকোনো গাছের নাম লিখুন এবং পূর্ণ নির্দেশিকা পান: ধাপ, সার, রোগ ও চিকিৎসা।",
+  "expert.placeholder": "যেমন টমেটো, আম, কাজুবাদাম, গোলাপ…",
+  "expert.button": "নির্দেশিকা দেখুন",
+  "expert.loading": "নির্দেশিকা তৈরি হচ্ছে…",
+  "language": "ভাষা",
+};
+
+const fa: Dict = {
+  ...en,
+  "nav.home": "خانه",
+  "nav.expert": "کارشناس",
+  "nav.explore": "جست‌وجو",
+  "nav.favorites": "علاقه‌مندی‌ها",
+  "nav.account": "حساب",
+  "expert.title": "از کارشناس کشاورزی بپرسید",
+  "expert.subtitle": "نام هر گیاهی را بنویسید و راهنمای کامل بگیرید: مراحل، کودها، بیماری‌ها و درمان.",
+  "expert.placeholder": "مثلاً گوجه، انبه، بادام هندی، گل رز…",
+  "expert.button": "دریافت راهنما",
+  "expert.loading": "در حال آماده‌سازی راهنما…",
+  "language": "زبان",
+};
+
+const dicts: Record<LangCode, Dict> = {
+  ar,
+  en,
+  fr,
+  es,
+  pt,
+  de,
+  tr,
+  ru,
+  zh,
+  id,
+  sw,
+  bn,
+  fa,
+  ur,
+  hi,
+};
 
 const STORAGE_KEY = "smart-farmer:lang";
 
