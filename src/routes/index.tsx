@@ -9,12 +9,15 @@ import {
   Recycle,
   Droplets,
   Columns3,
+  Wheat,
 } from "lucide-react";
 import { formatToday } from "@/data/environment";
 import { trendingSearches } from "@/data/plants";
 import { WeatherBar } from "@/components/env-strip";
 import { useLiveWeather } from "@/hooks/use-live-weather";
 import { useProfile } from "@/hooks/use-app-store";
+import { useI18n } from "@/lib/i18n";
+
 
 
 export const Route = createFileRoute("/")({
