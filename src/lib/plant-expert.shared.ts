@@ -70,3 +70,25 @@ export function expertSystemPrompt(language: string) {
     "If the input is not a plant, answer for the closest matching plant and say so in the summary.",
   ].join(" ");
 }
+
+/** الشكل المطلوب للـ JSON — يُرسل للنموذج لضمان ثبات النتيجة */
+export const guideJsonShape = `{
+  "nameLocal": string,
+  "nameEnglish": string,
+  "scientificName": string,
+  "family": string,
+  "summary": string,
+  "climate": string,
+  "seasons": string[],
+  "spaces": string[],
+  "daysToHarvest": string,
+  "water": string,
+  "sun": string,
+  "soil": string,
+  "steps": string[],
+  "fertilizers": [{ "name": string, "timing": string, "dose": string }],
+  "diseases": [{ "name": string, "symptoms": string, "treatment": string, "prevention": string }],
+  "harvest": string[],
+  "facts": string[],
+  "greenhouseNotes": string
+}`;
