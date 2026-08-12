@@ -15,6 +15,7 @@ import { Route as CompostRouteImport } from './routes/compost'
 import { Route as ExpertRouteImport } from './routes/expert'
 import { Route as ExploreRouteImport } from './routes/explore'
 import { Route as FavoritesRouteImport } from './routes/favorites'
+import { Route as FodderRouteImport } from './routes/fodder'
 import { Route as GreenhouseRouteImport } from './routes/greenhouse'
 import { Route as HydroponicsRouteImport } from './routes/hydroponics'
 import { Route as ResultsRouteImport } from './routes/results'
@@ -51,6 +52,11 @@ const FavoritesRoute = FavoritesRouteImport.update({
   path: '/favorites',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FodderRoute = FodderRouteImport.update({
+  id: '/fodder',
+  path: '/fodder',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GreenhouseRoute = GreenhouseRouteImport.update({
   id: '/greenhouse',
   path: '/greenhouse',
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/expert': typeof ExpertRoute
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
+  '/fodder': typeof FodderRoute
   '/greenhouse': typeof GreenhouseRoute
   '/hydroponics': typeof HydroponicsRoute
   '/results': typeof ResultsRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/expert': typeof ExpertRoute
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
+  '/fodder': typeof FodderRoute
   '/greenhouse': typeof GreenhouseRoute
   '/hydroponics': typeof HydroponicsRoute
   '/results': typeof ResultsRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/expert': typeof ExpertRoute
   '/explore': typeof ExploreRoute
   '/favorites': typeof FavoritesRoute
+  '/fodder': typeof FodderRoute
   '/greenhouse': typeof GreenhouseRoute
   '/hydroponics': typeof HydroponicsRoute
   '/results': typeof ResultsRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/expert'
     | '/explore'
     | '/favorites'
+    | '/fodder'
     | '/greenhouse'
     | '/hydroponics'
     | '/results'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/expert'
     | '/explore'
     | '/favorites'
+    | '/fodder'
     | '/greenhouse'
     | '/hydroponics'
     | '/results'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/expert'
     | '/explore'
     | '/favorites'
+    | '/fodder'
     | '/greenhouse'
     | '/hydroponics'
     | '/results'
@@ -166,6 +178,7 @@ export interface RootRouteChildren {
   ExpertRoute: typeof ExpertRoute
   ExploreRoute: typeof ExploreRoute
   FavoritesRoute: typeof FavoritesRoute
+  FodderRoute: typeof FodderRoute
   GreenhouseRoute: typeof GreenhouseRoute
   HydroponicsRoute: typeof HydroponicsRoute
   ResultsRoute: typeof ResultsRoute
@@ -217,6 +230,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FavoritesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fodder': {
+      id: '/fodder'
+      path: '/fodder'
+      fullPath: '/fodder'
+      preLoaderRoute: typeof FodderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/greenhouse': {
       id: '/greenhouse'
       path: '/greenhouse'
@@ -262,6 +282,7 @@ const rootRouteChildren: RootRouteChildren = {
   ExpertRoute: ExpertRoute,
   ExploreRoute: ExploreRoute,
   FavoritesRoute: FavoritesRoute,
+  FodderRoute: FodderRoute,
   GreenhouseRoute: GreenhouseRoute,
   HydroponicsRoute: HydroponicsRoute,
   ResultsRoute: ResultsRoute,

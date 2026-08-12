@@ -1,13 +1,25 @@
-import { MapPin, CalendarDays, Sun, CloudSun, CloudRain, Cloud, Droplets, Wind, LocateFixed } from "lucide-react";
+import {
+  MapPin,
+  CalendarDays,
+  Sun,
+  CloudSun,
+  CloudRain,
+  Cloud,
+  Droplets,
+  Wind,
+  LocateFixed,
+} from "lucide-react";
 import { shortToday } from "@/data/environment";
 import { seasonForMonth, seasonLabels } from "@/data/plants";
 import { useLiveWeather } from "@/hooks/use-live-weather";
+import { useI18n } from "@/lib/i18n";
 
 const icons = { sun: Sun, cloud: Cloud, rain: CloudRain } as const;
 
 /** شريحة صغيرة تعرض الموقع والتاريخ والمناخ الحقيقي */
 export function EnvStrip() {
   const { weather, city } = useLiveWeather();
+  const { t } = useI18n();
   const season = seasonForMonth(new Date().getMonth() + 1);
 
   return (
@@ -24,10 +36,12 @@ export function EnvStrip() {
       <span className="text-gold">•</span>
       <span className="inline-flex items-center gap-1">
         <CloudSun className="size-3.5 text-primary" />
-        {weather ? `${weather.tempC}° ${weather.condition}` : "جاري قراءة الطقس…"}
+        {weather ? `${weather.tempC}° ${weather.condition}` : t("env.reading")}
       </span>
       <span className="text-gold">•</span>
-      <span className="text-primary">موسم {seasonLabels[season]}</span>
+      <span className="text-primary">
+        {t("env.season")} {seasonLabels[season]}
+      </span>
     </div>
   );
 }
@@ -35,7 +49,17 @@ export function EnvStrip() {
 /** شريط المناخ الكبير في الصفحة الرئيسية — بيانات حقيقية من خدمة الطقس */
 export function WeatherBar() {
   const { weather, isLoading, locationStatus } = useLiveWeather();
+  const { t } = useI18n();
   const Icon = icons[weather?.icon ?? "sun"];
+
+  const locationLabel =
+    locationStatus === "granted"
+      ? t("env.auto")
+      : locationStatus === "locating" || locationStatus === "idle"
+        ? t("env.locating")
+        : locationStatus === "ip"
+          ? t("env.ip")
+          : t("env.default");
 
   return (
     <div className="rounded-[20px] border border-gold/30 bg-primary/8 px-4 py-3">
@@ -46,9 +70,9 @@ export function WeatherBar() {
           </span>
           <div>
             <p className="text-sm font-bold text-foreground">
-              {isLoading ? "جاري تحديث الطقس…" : (weather?.condition ?? "غير متوفر")}
+              {isLoading ? t("env.loading") : (weather?.condition ?? t("env.unavailable"))}
             </p>
-            <p className="text-[11px] text-muted-foreground">حالة المناخ الآن</p>
+            <p className="text-[11px] text-muted-foreground">{t("env.now")}</p>
           </div>
         </div>
         <div className="text-left">
@@ -57,22 +81,18 @@ export function WeatherBar() {
           </p>
           <p className="inline-flex items-center gap-1 text-[11px] text-muted-foreground">
             <Droplets className="size-3" />
-            رطوبة {weather?.humidity ?? "--"}%
+            {t("env.humidity")} {weather?.humidity ?? "--"}%
           </p>
         </div>
       </div>
       <div className="mt-2 flex flex-wrap items-center gap-3 border-t border-gold/20 pt-2 text-[11px] font-semibold text-muted-foreground">
         <span className="inline-flex items-center gap-1">
           <Wind className="size-3" />
-          رياح {weather?.windKph ?? "--"} كم/س
+          {t("env.wind")} {weather?.windKph ?? "--"} {t("env.windUnit")}
         </span>
         <span className="inline-flex items-center gap-1">
           <LocateFixed className="size-3 text-primary" />
-          {locationStatus === "granted"
-            ? "تحديد تلقائي للموقع"
-            : locationStatus === "locating"
-              ? "جاري تحديد موقعك…"
-              : "الموقع الافتراضي (الرياض)"}
+          {locationLabel}
         </span>
       </div>
     </div>
