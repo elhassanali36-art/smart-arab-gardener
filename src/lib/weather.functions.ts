@@ -114,3 +114,35 @@ export const getLiveWeather = createServerFn({ method: "GET" })
       };
     }
   });
+
+/**
+ * تحديد الموقع من عنوان IP — يُستخدم عندما يرفض المتصفح إذن الموقع
+ * أو عندما يكون التطبيق داخل إطار (iframe) لا يسمح بخدمة الموقع.
+ */
+export const getIpLocation = createServerFn({ method: "GET" }).handler(
+  async (): Promise<{ lat: number; lon: number; city: string; ok: boolean }> => {
+    try {
+      const res = await fetch("https://ipwho.is/?fields=latitude,longitude,city,country,success");
+      if (!res.ok) throw new Error(`ipwho.is failed [${res.status}]`);
+      const j = (await res.json()) as {
+        success?: boolean;
+        latitude?: number;
+        longitude?: number;
+        city?: string;
+        country?: string;
+      };
+      if (!j.success || typeof j.latitude !== "number" || typeof j.longitude !== "number") {
+        throw new Error("ipwho.is returned no coordinates");
+      }
+      return {
+        lat: j.latitude,
+        lon: j.longitude,
+        city: [j.city, j.country].filter(Boolean).join("، ") || "موقعك الحالي",
+        ok: true,
+      };
+    } catch (error) {
+      console.error("ip location failed", error);
+      return { lat: 24.7136, lon: 46.6753, city: "الرياض، السعودية", ok: false };
+    }
+  },
+);
