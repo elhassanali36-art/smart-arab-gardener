@@ -39,26 +39,28 @@ export const Route = createFileRoute("/")({
 function Home() {
   const { profile } = useProfile();
   const { city } = useLiveWeather();
-
+  const { t } = useI18n();
 
   return (
     <main className="px-4 pt-8">
       <header className="mb-6">
-        <p className="text-sm text-muted-foreground">أهلاً بك 👋</p>
+        <p className="text-sm text-muted-foreground">{t("home.welcome")}</p>
         <h1 className="mt-1 font-display text-2xl font-extrabold text-foreground">
-          {profile.name}، هيّا نزرع شيئاً جديداً
+          {profile.name}، {t("home.tagline")}
         </h1>
       </header>
 
       <div className="grid grid-cols-2 gap-3">
         <div className="surface-card p-4">
           <MapPin className="size-5 text-primary" />
-          <p className="mt-3 text-[11px] font-semibold text-muted-foreground">الموقع الحالي</p>
+          <p className="mt-3 text-[11px] font-semibold text-muted-foreground">
+            {t("home.location")}
+          </p>
           <p className="mt-0.5 text-sm font-bold text-foreground">{city}</p>
         </div>
         <div className="surface-card p-4">
           <CalendarDays className="size-5 text-gold-ink" />
-          <p className="mt-3 text-[11px] font-semibold text-muted-foreground">تاريخ اليوم</p>
+          <p className="mt-3 text-[11px] font-semibold text-muted-foreground">{t("home.date")}</p>
           <p className="mt-0.5 text-sm font-bold text-foreground">{formatToday()}</p>
         </div>
       </div>
@@ -73,9 +75,7 @@ function Home() {
       >
         <span className="flex items-center gap-3">
           <Sprout className="size-7" />
-          <span className="font-display text-lg font-extrabold">
-            ماذا يمكنني أن أزرع الآن؟
-          </span>
+          <span className="font-display text-lg font-extrabold">{t("home.cta")}</span>
         </span>
         <ArrowLeft className="size-5" />
       </Link>
@@ -89,11 +89,9 @@ function Home() {
             <Sprout className="size-5 text-primary" />
           </span>
           <span className="flex-1">
-            <span className="block text-sm font-bold text-foreground">
-              اسأل الخبير عن أي نبات
-            </span>
+            <span className="block text-sm font-bold text-foreground">{t("home.expertCard")}</span>
             <span className="block text-[11px] text-muted-foreground">
-              زراعته، أسمدته، أمراضه وعلاجها — بعدة لغات
+              {t("home.expertCardSub")}
             </span>
           </span>
           <ArrowLeft className="size-4 text-muted-foreground" />
@@ -102,32 +100,33 @@ function Home() {
         <div className="grid grid-cols-2 gap-3">
           <Link to="/greenhouse" className="surface-card p-4">
             <Warehouse className="size-5 text-primary" />
-            <p className="mt-3 text-sm font-bold text-foreground">البيوت المحمية</p>
-            <p className="text-[11px] text-muted-foreground">الإنشاء والفوائد</p>
+            <p className="mt-3 text-sm font-bold text-foreground">{t("home.greenhouseCard")}</p>
           </Link>
           <Link to="/compost" className="surface-card p-4">
             <Recycle className="size-5 text-gold-ink" />
-            <p className="mt-3 text-sm font-bold text-foreground">صناعة الكمبوست</p>
-            <p className="text-[11px] text-muted-foreground">المواد والخطوات</p>
+            <p className="mt-3 text-sm font-bold text-foreground">{t("home.compostCard")}</p>
           </Link>
           <Link to="/hydroponics" className="surface-card p-4">
             <Droplets className="size-5 text-primary" />
-            <p className="mt-3 text-sm font-bold text-foreground">الزراعة المائية</p>
-            <p className="text-[11px] text-muted-foreground">بدون تربة ومياه أقل</p>
+            <p className="mt-3 text-sm font-bold text-foreground">{t("home.hydroCard")}</p>
           </Link>
           <Link to="/vertical" className="surface-card p-4">
             <Columns3 className="size-5 text-gold-ink" />
-            <p className="mt-3 text-sm font-bold text-foreground">الزراعة في أعمدة</p>
-            <p className="text-[11px] text-muted-foreground">أبراج وجدران خضراء</p>
+            <p className="mt-3 text-sm font-bold text-foreground">{t("home.verticalCard")}</p>
+          </Link>
+          <Link to="/fodder" className="surface-card col-span-2 p-4">
+            <Wheat className="size-5 text-primary" />
+            <p className="mt-3 text-sm font-bold text-foreground">{t("home.fodderCard")}</p>
+            <p className="text-[11px] text-muted-foreground">{t("fodder.subtitle")}</p>
           </Link>
         </div>
       </section>
 
-
       <section className="mt-8">
         <h2 className="mb-3 font-display text-base font-bold text-foreground">
-          الأكثر بحثاً هذا الأسبوع
+          {t("home.trending")}
         </h2>
+
         <div className="flex flex-wrap gap-2">
           {trendingSearches.map((term) => (
             <Link
