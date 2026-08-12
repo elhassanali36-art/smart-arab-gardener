@@ -1,9 +1,9 @@
 import { createServerFn } from "@tanstack/react-start";
-import { NoObjectGeneratedError, Output, streamText } from "ai";
-import { createLovableAiGatewayProvider } from "./ai-gateway.server";
+import { generateJson } from "./ai-json.server";
 import {
   expertInputSchema,
   expertSystemPrompt,
+  guideJsonShape,
   guideSchema,
   languageNames,
 } from "./plant-expert.shared";
@@ -11,23 +11,10 @@ import {
 export const askPlantExpert = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => expertInputSchema.parse(input))
   .handler(async ({ data }) => {
-    const key = process.env["LOVABLE_API_KEY"];
-    if (!key) throw new Error("Missing LOVABLE_API_KEY");
-
-    const gateway = createLovableAiGatewayProvider(key);
-    const result = streamText({
-      model: gateway("google/gemini-2.5-flash"),
-      output: Output.object({ schema: guideSchema }),
-      system: expertSystemPrompt(languageNames[data.lang] ?? "Arabic"),
-      prompt: `Plant or crop the user asked about: "${data.query}"`,
+    const language = languageNames[data.lang] ?? "Arabic";
+    return generateJson({
+      schema: guideSchema,
+      system: `${expertSystemPrompt(language)}\nUse exactly this JSON shape:\n${guideJsonShape}`,
+      prompt: `Plant or crop the user asked about: "${data.query}". Write every text value in ${language}.`,
     });
-
-    try {
-      return await result.output;
-    } catch (error) {
-      if (NoObjectGeneratedError.isInstance(error) && error.text) {
-        return guideSchema.parse(JSON.parse(error.text));
-      }
-      throw error;
-    }
   });
