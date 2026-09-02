@@ -19,9 +19,13 @@ export function PlantCard({
         params={{ plantId: plant.id }}
         className="flex flex-1 items-center gap-4"
       >
-        <span className="grid size-16 shrink-0 place-items-center rounded-2xl bg-primary/10 text-3xl">
-          {plant.emoji}
-        </span>
+        <PlantPhoto
+          id={plant.id}
+          emoji={plant.emoji}
+          alt={`صورة ${plant.nameAr}`}
+          className="size-16 shrink-0 rounded-2xl"
+          emojiClassName="text-3xl"
+        />
         <span className="flex-1">
           <span className="block text-base font-bold text-foreground">{plant.nameAr}</span>
           <span className="block text-xs text-muted-foreground">{plant.nameEn}</span>
