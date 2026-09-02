@@ -10,6 +10,7 @@ import {
   categoryLabels,
   categoryOf,
 } from "@/data/plants";
+import { PlantPhoto } from "@/components/plant-photo";
 import { useFavorites } from "@/hooks/use-app-store";
 import { cn } from "@/lib/utils";
 
