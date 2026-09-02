@@ -10,6 +10,7 @@ import {
   categoryLabels,
   categoryOf,
 } from "@/data/plants";
+import { PlantPhoto } from "@/components/plant-photo";
 import { useFavorites } from "@/hooks/use-app-store";
 import { cn } from "@/lib/utils";
 
@@ -75,9 +76,13 @@ function PlantDetail() {
       </div>
 
       <div className="surface-card flex flex-col items-center px-5 py-7 text-center">
-        <span className="grid size-24 place-items-center rounded-full bg-primary/10 text-5xl">
-          {plant.emoji}
-        </span>
+        <PlantPhoto
+          id={plant.id}
+          emoji={plant.emoji}
+          alt={`صورة نبات ${plant.nameAr}`}
+          className="h-44 w-full rounded-[18px] border border-gold/30"
+          emojiClassName="text-5xl"
+        />
         <h1 className="mt-4 font-display text-2xl font-extrabold text-foreground">
           {plant.nameAr}
         </h1>

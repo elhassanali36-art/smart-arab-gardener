@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { MapPin, Languages, ChevronLeft, Leaf } from "lucide-react";
 import { plants } from "@/data/plants";
+import { PlantPhoto } from "@/components/plant-photo";
 import { useFavorites, useProfile } from "@/hooks/use-app-store";
 import { languages, useI18n } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -60,7 +61,13 @@ function Account() {
               className="flex items-center justify-between px-3 py-3"
             >
               <span className="flex items-center gap-3 text-sm font-bold text-foreground">
-                <span className="text-xl">{p.emoji}</span>
+                <PlantPhoto
+                  id={p.id}
+                  emoji={p.emoji}
+                  alt={`صورة ${p.nameAr}`}
+                  className="size-10 shrink-0 rounded-xl"
+                  emojiClassName="text-xl"
+                />
                 {p.nameAr}
               </span>
               <ChevronLeft className="size-4 text-muted-foreground" />
