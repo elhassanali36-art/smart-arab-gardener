@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Clock, Heart } from "lucide-react";
 import { difficultyLabels, type Plant } from "@/data/plants";
+import { PlantPhoto } from "@/components/plant-photo";
 import { cn } from "@/lib/utils";
 
 export function PlantCard({
