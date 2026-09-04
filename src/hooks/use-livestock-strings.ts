@@ -106,7 +106,7 @@ export type LsStrings = typeof lsStrings.en;
 export function useLivestockStrings() {
   const { lang } = useI18n();
   const translate = useServerFn(translateStrings);
-  const base: LsStrings = lang === "ar" ? (lsStrings.ar as LsStrings) : lsStrings.en;
+  const base: LsStrings = lang === "ar" ? (lsStrings.ar as unknown as LsStrings) : lsStrings.en;
   const needs = lang !== "ar" && lang !== "en";
   const cacheKey = `smart-farmer:ls-ui:${lang}`;
 
