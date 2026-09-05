@@ -13,6 +13,7 @@ export function GuidePage({
   title,
   subtitle,
   videos,
+  heroImage,
 }: {
   cacheKey: string;
   guides: Record<"ar" | "en", LongGuide>;
