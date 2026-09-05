@@ -33,6 +33,15 @@ export function GuidePage({
       <h1 className="mt-3 font-display text-2xl font-extrabold text-foreground">{title}</h1>
       <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
 
+      {heroImage && (
+        <img
+          src={heroImage}
+          alt={title}
+          loading="lazy"
+          className="mt-4 aspect-[16/9] w-full rounded-[20px] border border-gold/20 object-cover shadow-soft"
+        />
+      )}
+
       {isTranslating && (
         <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1.5 text-xs font-semibold text-muted-foreground">
           <Loader2 className="size-3.5 animate-spin" />
