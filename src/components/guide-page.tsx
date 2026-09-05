@@ -20,6 +20,8 @@ export function GuidePage({
   title: string;
   subtitle: string;
   videos?: GuideVideo[];
+  /** صورة فوتوغرافية حقيقية تظهر أعلى الدليل */
+  heroImage?: string;
 }) {
   const { t, lang } = useI18n();
   const { guide, isTranslating } = useTranslatedGuide(cacheKey, guides);
