@@ -36,6 +36,7 @@ function Greenhouse() {
       icon={<Warehouse className="size-7 text-primary" />}
       title={t("greenhouse.title")}
       subtitle={t("greenhouse.subtitle")}
+      heroImage={guideImages.greenhouse}
     />
   );
 }

@@ -35,6 +35,7 @@ function Compost() {
       icon={<Recycle className="size-7 text-primary" />}
       title={t("compost.title")}
       subtitle={t("compost.subtitle")}
+      heroImage={guideImages.compost}
     />
   );
 }

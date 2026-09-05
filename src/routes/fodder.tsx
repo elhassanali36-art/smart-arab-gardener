@@ -37,6 +37,7 @@ function Fodder() {
       title={t("fodder.title")}
       subtitle={t("fodder.subtitle")}
       videos={fodderVideos}
+      heroImage={guideImages.fodder}
     />
   );
 }

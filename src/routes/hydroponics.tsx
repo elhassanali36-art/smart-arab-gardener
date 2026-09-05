@@ -37,6 +37,7 @@ function Hydroponics() {
       title={t("hydro.title")}
       subtitle={t("hydro.subtitle")}
       videos={hydroVideos}
+      heroImage={guideImages.hydroponics}
     />
   );
 }

@@ -37,6 +37,7 @@ function Vertical() {
       title={t("vertical.title")}
       subtitle={t("vertical.subtitle")}
       videos={verticalVideos}
+      heroImage={guideImages.vertical}
     />
   );
 }
