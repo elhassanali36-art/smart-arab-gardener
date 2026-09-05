@@ -3,6 +3,7 @@ import { Wheat } from "lucide-react";
 import { fodderGuide } from "@/data/guides-fodder";
 import { fodderVideos } from "@/data/videos";
 import { GuidePage } from "@/components/guide-page";
+import { guideImages } from "@/data/guide-images";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/fodder")({

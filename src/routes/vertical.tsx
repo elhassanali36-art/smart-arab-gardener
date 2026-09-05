@@ -3,6 +3,7 @@ import { Columns3 } from "lucide-react";
 import { verticalGuide } from "@/data/guides-modern";
 import { verticalVideos } from "@/data/videos";
 import { GuidePage } from "@/components/guide-page";
+import { guideImages } from "@/data/guide-images";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/vertical")({

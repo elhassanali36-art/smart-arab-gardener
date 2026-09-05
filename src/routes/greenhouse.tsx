@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Warehouse } from "lucide-react";
 import { greenhouseGuide } from "@/data/guides";
 import { GuidePage } from "@/components/guide-page";
+import { guideImages } from "@/data/guide-images";
 import { useI18n } from "@/lib/i18n";
 
 
