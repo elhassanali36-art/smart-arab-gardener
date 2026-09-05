@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Warehouse } from "lucide-react";
 import { greenhouseGuide } from "@/data/guides";
 import { GuidePage } from "@/components/guide-page";
+import { guideImages } from "@/data/guide-images";
 import { useI18n } from "@/lib/i18n";
 
 
@@ -35,6 +36,7 @@ function Greenhouse() {
       icon={<Warehouse className="size-7 text-primary" />}
       title={t("greenhouse.title")}
       subtitle={t("greenhouse.subtitle")}
+      heroImage={guideImages.greenhouse}
     />
   );
 }

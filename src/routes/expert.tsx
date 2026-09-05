@@ -17,6 +17,7 @@ import {
   Layers,
 } from "lucide-react";
 import { askPlantExpert } from "@/lib/plant-expert.functions";
+import { guideImages } from "@/data/guide-images";
 import type { PlantGuide } from "@/lib/plant-expert.shared";
 import { useI18n } from "@/lib/i18n";
 
@@ -72,6 +73,13 @@ function Expert() {
     <main className="px-4 pt-8">
       <h1 className="font-display text-2xl font-extrabold text-foreground">{t("expert.title")}</h1>
       <p className="mt-1 text-sm text-muted-foreground">{t("expert.subtitle")}</p>
+
+      <img
+        src={guideImages.expert}
+        alt={t("expert.title")}
+        loading="lazy"
+        className="mt-4 aspect-[16/9] w-full rounded-[20px] border border-gold/20 object-cover shadow-soft"
+      />
 
       <div className="mt-4 flex items-center gap-2 rounded-2xl border border-gold/30 bg-card px-3 py-2.5 shadow-soft">
         <Search className="size-4 text-primary" />

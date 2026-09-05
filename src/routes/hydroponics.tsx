@@ -3,6 +3,7 @@ import { Droplets } from "lucide-react";
 import { hydroponicsGuide } from "@/data/guides-modern";
 import { hydroVideos } from "@/data/videos";
 import { GuidePage } from "@/components/guide-page";
+import { guideImages } from "@/data/guide-images";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/hydroponics")({
@@ -36,6 +37,7 @@ function Hydroponics() {
       title={t("hydro.title")}
       subtitle={t("hydro.subtitle")}
       videos={hydroVideos}
+      heroImage={guideImages.hydroponics}
     />
   );
 }

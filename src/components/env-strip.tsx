@@ -38,6 +38,15 @@ export function EnvStrip() {
         <CloudSun className="size-3.5 text-primary" />
         {weather ? `${weather.tempC}° ${weather.condition}` : t("env.reading")}
       </span>
+      {weather && (
+        <>
+          <span className="text-gold">•</span>
+          <span className="inline-flex items-center gap-1">
+            <Droplets className="size-3.5 text-primary" />
+            {t("env.humidity")} {weather.humidity}%
+          </span>
+        </>
+      )}
       <span className="text-gold">•</span>
       <span className="text-primary">
         {t("env.season")} {seasonLabels[season]}

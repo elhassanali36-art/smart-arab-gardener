@@ -13,6 +13,7 @@ export function GuidePage({
   title,
   subtitle,
   videos,
+  heroImage,
 }: {
   cacheKey: string;
   guides: Record<"ar" | "en", LongGuide>;
@@ -20,6 +21,8 @@ export function GuidePage({
   title: string;
   subtitle: string;
   videos?: GuideVideo[];
+  /** صورة فوتوغرافية حقيقية تظهر أعلى الدليل */
+  heroImage?: string;
 }) {
   const { t, lang } = useI18n();
   const { guide, isTranslating } = useTranslatedGuide(cacheKey, guides);
@@ -29,6 +32,15 @@ export function GuidePage({
       <span className="grid size-14 place-items-center rounded-2xl bg-primary/10">{icon}</span>
       <h1 className="mt-3 font-display text-2xl font-extrabold text-foreground">{title}</h1>
       <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
+
+      {heroImage && (
+        <img
+          src={heroImage}
+          alt={title}
+          loading="lazy"
+          className="mt-4 aspect-[16/9] w-full rounded-[20px] border border-gold/20 object-cover shadow-soft"
+        />
+      )}
 
       {isTranslating && (
         <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1.5 text-xs font-semibold text-muted-foreground">

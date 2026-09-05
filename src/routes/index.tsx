@@ -10,6 +10,7 @@ import {
   Droplets,
   Columns3,
   Wheat,
+  Beef,
 } from "lucide-react";
 import { formatToday } from "@/data/environment";
 import { trendingSearches } from "@/data/plants";
@@ -121,6 +122,20 @@ function Home() {
             <Wheat className="size-5 text-primary" />
             <p className="mt-3 text-sm font-bold text-foreground">{t("home.fodderCard")}</p>
             <p className="text-[11px] text-muted-foreground">{t("fodder.subtitle")}</p>
+          </Link>
+          <Link to="/livestock" className="surface-card col-span-2 flex items-center gap-3 p-4">
+            <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-primary/10">
+              <Beef className="size-5 text-primary" />
+            </span>
+            <span className="flex-1">
+              <span className="block text-sm font-bold text-foreground">
+                {t("home.livestockCard")}
+              </span>
+              <span className="block text-[11px] text-muted-foreground">
+                {t("home.livestockCardSub")}
+              </span>
+            </span>
+            <ArrowLeft className="size-4 text-muted-foreground" />
           </Link>
         </div>
       </section>
