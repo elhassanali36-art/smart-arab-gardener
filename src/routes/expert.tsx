@@ -137,9 +137,15 @@ function Expert() {
       {guide && (
         <div className="mt-6 space-y-4 pb-4">
           <div className="surface-card px-5 py-6 text-center">
-            <span className="grid mx-auto size-20 place-items-center rounded-full bg-primary/10 text-4xl">
-              🌿
-            </span>
+            <img
+              src={guideImages.expert}
+              alt={guide.nameLocal}
+              loading="lazy"
+              width={320}
+              height={320}
+              className="mx-auto size-24 rounded-full object-cover ring-2 ring-gold/40"
+            />
+
             <h2 className="mt-3 font-display text-xl font-extrabold text-foreground">
               {guide.nameLocal}
             </h2>
@@ -233,9 +239,11 @@ function Expert() {
           <Section icon={Wheat} title={t("expert.harvest")}>
             <ul className="space-y-2">
               {guide.harvest.map((h, i) => (
-                <li key={i} className="text-sm leading-relaxed text-foreground">
-                  🌾 {h}
+                <li key={i} className="flex items-start gap-2 text-sm leading-relaxed text-foreground">
+                  <Wheat className="mt-0.5 size-4 shrink-0 text-primary" />
+                  <span>{h}</span>
                 </li>
+
               ))}
             </ul>
           </Section>
