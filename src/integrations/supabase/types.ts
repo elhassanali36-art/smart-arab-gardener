@@ -80,6 +80,98 @@ export type Database = {
         }
         Relationships: []
       }
+      poultry_groups: {
+        Row: {
+          breed: string
+          created_at: string
+          id: string
+          location: string
+          name: string
+          notes: string | null
+          purpose: string
+          quantity: number
+          species: string
+          start_date: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          breed?: string
+          created_at?: string
+          id?: string
+          location?: string
+          name: string
+          notes?: string | null
+          purpose?: string
+          quantity?: number
+          species?: string
+          start_date?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          breed?: string
+          created_at?: string
+          id?: string
+          location?: string
+          name?: string
+          notes?: string | null
+          purpose?: string
+          quantity?: number
+          species?: string
+          start_date?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      poultry_records: {
+        Row: {
+          amount: number
+          created_at: string
+          group_id: string
+          id: string
+          kind: string
+          notes: string | null
+          quantity: number
+          record_date: string
+          unit: string
+          user_id: string
+        }
+        Insert: {
+          amount?: number
+          created_at?: string
+          group_id: string
+          id?: string
+          kind: string
+          notes?: string | null
+          quantity?: number
+          record_date?: string
+          unit?: string
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          group_id?: string
+          id?: string
+          kind?: string
+          notes?: string | null
+          quantity?: number
+          record_date?: string
+          unit?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "poultry_records_group_id_fkey"
+            columns: ["group_id"]
+            isOneToOne: false
+            referencedRelation: "poultry_groups"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
