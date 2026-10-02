@@ -68,9 +68,7 @@ export const Route = createFileRoute("/poultry")({
   component: PoultryPage,
 });
 
-type Strings = Record<string, string>;
-
-const ar: Strings = {
+const ar = {
   title: "الدواجن والماشية الصغيرة",
   subtitle: "ملفات كاملة لكل نوع، حاسبة علف، سجلات مزرعة ورؤى ذكية من بياناتك الفعلية",
   signinTitle: "سجّل الدخول لإدارة قطيعك",
@@ -155,7 +153,7 @@ const ar: Strings = {
   close: "إغلاق",
 };
 
-const en: Strings = {
+const en: typeof ar = {
   title: "Poultry & Small Livestock",
   subtitle: "Full species profiles, feed calculator, farm records and AI insights from your real data",
   signinTitle: "Sign in to manage your flock",
@@ -428,7 +426,7 @@ function PoultryPage() {
 
   const calc = useMemo(() => {
     const sp = speciesById[calcSpecies];
-    const stage = sp.feed[Math.min(calcStage, sp.feed.length - 1)];
+    const stage = sp.feed[Math.min(calcStage, sp.feed.length - 1)]!;
     const dailyKg = (stage.gramsPerHeadPerDay * calcCount) / 1000;
     return { stage, dailyKg, monthlyKg: dailyKg * 30 };
   }, [calcSpecies, calcStage, calcCount]);
