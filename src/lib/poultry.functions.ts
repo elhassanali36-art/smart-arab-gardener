@@ -132,7 +132,7 @@ export const createPoultryGroup = createServerFn({ method: "POST" })
         breed: data.breed,
         purpose: data.purpose,
         quantity: data.quantity,
-        start_date: data.startDate || null,
+        start_date: data.startDate || "",
         location: data.location,
         notes: data.notes ?? null,
       })
@@ -157,7 +157,7 @@ export const updatePoultryGroup = createServerFn({ method: "POST" })
         breed: rest.breed,
         purpose: rest.purpose,
         quantity: rest.quantity,
-        start_date: rest.startDate || null,
+        start_date: rest.startDate || "",
         location: rest.location,
         notes: rest.notes ?? null,
       })
@@ -195,11 +195,11 @@ export const addPoultryRecord = createServerFn({ method: "POST" })
       .from("poultry_records")
       .insert({
         user_id: context.userId,
-        group_id: data.groupId ?? null,
+        group_id: data.groupId ?? undefined,
         kind: data.kind,
         quantity: data.quantity,
         unit: data.unit,
-        amount: data.amount ?? null,
+        amount: data.amount ?? undefined,
         record_date: data.recordDate,
         notes: data.notes ?? null,
       })
