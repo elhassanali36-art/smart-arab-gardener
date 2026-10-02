@@ -20,6 +20,7 @@ import { Route as FodderRouteImport } from './routes/fodder'
 import { Route as GreenhouseRouteImport } from './routes/greenhouse'
 import { Route as HydroponicsRouteImport } from './routes/hydroponics'
 import { Route as LivestockRouteImport } from './routes/livestock'
+import { Route as PoultryRouteImport } from './routes/poultry'
 import { Route as ResultsRouteImport } from './routes/results'
 import { Route as VerticalRouteImport } from './routes/vertical'
 import { Route as PlantsPlantIdRouteImport } from './routes/plants.$plantId'
@@ -79,6 +80,11 @@ const LivestockRoute = LivestockRouteImport.update({
   path: '/livestock',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoultryRoute = PoultryRouteImport.update({
+  id: '/poultry',
+  path: '/poultry',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResultsRoute = ResultsRouteImport.update({
   id: '/results',
   path: '/results',
@@ -107,6 +113,7 @@ export interface FileRoutesByFullPath {
   '/greenhouse': typeof GreenhouseRoute
   '/hydroponics': typeof HydroponicsRoute
   '/livestock': typeof LivestockRoute
+  '/poultry': typeof PoultryRoute
   '/results': typeof ResultsRoute
   '/vertical': typeof VerticalRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
@@ -123,6 +130,7 @@ export interface FileRoutesByTo {
   '/greenhouse': typeof GreenhouseRoute
   '/hydroponics': typeof HydroponicsRoute
   '/livestock': typeof LivestockRoute
+  '/poultry': typeof PoultryRoute
   '/results': typeof ResultsRoute
   '/vertical': typeof VerticalRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/greenhouse': typeof GreenhouseRoute
   '/hydroponics': typeof HydroponicsRoute
   '/livestock': typeof LivestockRoute
+  '/poultry': typeof PoultryRoute
   '/results': typeof ResultsRoute
   '/vertical': typeof VerticalRoute
   '/plants/$plantId': typeof PlantsPlantIdRoute
@@ -158,6 +167,7 @@ export interface FileRouteTypes {
     | '/greenhouse'
     | '/hydroponics'
     | '/livestock'
+    | '/poultry'
     | '/results'
     | '/vertical'
     | '/plants/$plantId'
@@ -174,6 +184,7 @@ export interface FileRouteTypes {
     | '/greenhouse'
     | '/hydroponics'
     | '/livestock'
+    | '/poultry'
     | '/results'
     | '/vertical'
     | '/plants/$plantId'
@@ -190,6 +201,7 @@ export interface FileRouteTypes {
     | '/greenhouse'
     | '/hydroponics'
     | '/livestock'
+    | '/poultry'
     | '/results'
     | '/vertical'
     | '/plants/$plantId'
@@ -207,6 +219,7 @@ export interface RootRouteChildren {
   GreenhouseRoute: typeof GreenhouseRoute
   HydroponicsRoute: typeof HydroponicsRoute
   LivestockRoute: typeof LivestockRoute
+  PoultryRoute: typeof PoultryRoute
   ResultsRoute: typeof ResultsRoute
   VerticalRoute: typeof VerticalRoute
   PlantsPlantIdRoute: typeof PlantsPlantIdRoute
@@ -291,6 +304,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LivestockRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/poultry': {
+      id: '/poultry'
+      path: '/poultry'
+      fullPath: '/poultry'
+      preLoaderRoute: typeof PoultryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/results': {
       id: '/results'
       path: '/results'
@@ -327,6 +347,7 @@ const rootRouteChildren: RootRouteChildren = {
   GreenhouseRoute: GreenhouseRoute,
   HydroponicsRoute: HydroponicsRoute,
   LivestockRoute: LivestockRoute,
+  PoultryRoute: PoultryRoute,
   ResultsRoute: ResultsRoute,
   VerticalRoute: VerticalRoute,
   PlantsPlantIdRoute: PlantsPlantIdRoute,
