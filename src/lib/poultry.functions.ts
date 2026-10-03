@@ -199,7 +199,7 @@ export const addPoultryRecord = createServerFn({ method: "POST" })
         kind: data.kind,
         quantity: data.quantity,
         unit: data.unit,
-        amount: data.amount ?? undefined,
+        amount: data.amount ?? 0,
         record_date: data.recordDate,
         notes: data.notes ?? null,
       })
