@@ -129,7 +129,7 @@ export type Database = {
         Row: {
           amount: number
           created_at: string
-          group_id: string
+          group_id: string | null
           id: string
           kind: string
           notes: string | null
@@ -141,7 +141,7 @@ export type Database = {
         Insert: {
           amount?: number
           created_at?: string
-          group_id: string
+          group_id?: string | null
           id?: string
           kind: string
           notes?: string | null
@@ -153,7 +153,7 @@ export type Database = {
         Update: {
           amount?: number
           created_at?: string
-          group_id?: string
+          group_id?: string | null
           id?: string
           kind?: string
           notes?: string | null
