@@ -207,21 +207,6 @@ function LivestockPage() {
     );
   }
 
-  if (session === "out") {
-    return (
-      <main className="px-4 pt-10">
-        <h1 className="font-display text-2xl font-extrabold text-foreground">{s.signinTitle}</h1>
-        <p className="mt-2 text-sm text-muted-foreground">{s.signinBody}</p>
-        <Link
-          to="/auth"
-          className="mt-5 inline-flex rounded-2xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-hero"
-        >
-          {s.signin}
-        </Link>
-      </main>
-    );
-  }
-
   return (
     <main className="px-4 pt-8">
       <header>
@@ -231,6 +216,15 @@ function LivestockPage() {
         <h1 className="mt-3 font-display text-2xl font-extrabold text-foreground">{s.title}</h1>
         <p className="mt-1 text-sm text-muted-foreground">{s.subtitle}</p>
       </header>
+
+      {session === "out" && (
+        <div className="surface-card mt-4 flex items-center justify-between gap-3 p-3">
+          <p className="text-xs text-muted-foreground">{s.signinBody}</p>
+          <Link to="/auth" className="shrink-0 rounded-xl bg-primary px-3 py-2 text-xs font-bold text-primary-foreground">
+            {s.signin}
+          </Link>
+        </div>
+      )}
 
       {/* بطاقات نظرة عامة */}
       <div className="mt-5 grid grid-cols-2 gap-3">
