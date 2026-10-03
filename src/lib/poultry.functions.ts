@@ -195,7 +195,7 @@ export const addPoultryRecord = createServerFn({ method: "POST" })
       .from("poultry_records")
       .insert({
         user_id: context.userId,
-        group_id: data.groupId ?? undefined,
+        group_id: data.groupId ?? null,
         kind: data.kind,
         quantity: data.quantity,
         unit: data.unit,
