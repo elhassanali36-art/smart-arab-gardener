@@ -11,6 +11,7 @@ import {
   Columns3,
   Wheat,
   Beef,
+  Fish,
 } from "lucide-react";
 import { formatToday } from "@/data/environment";
 import { trendingSearches } from "@/data/plants";
@@ -134,6 +135,16 @@ function Home() {
               <span className="block text-[11px] text-muted-foreground">
                 {t("home.livestockCardSub")}
               </span>
+            </span>
+            <ArrowLeft className="size-4 text-muted-foreground" />
+          </Link>
+          <Link to="/aquaculture" className="surface-card col-span-2 flex items-center gap-3 p-4">
+            <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-primary/10">
+              <Fish className="size-5 text-primary" />
+            </span>
+            <span className="flex-1">
+              <span className="block text-sm font-bold text-foreground">المأكولات البحرية والثروة المائية</span>
+              <span className="block text-[11px] text-muted-foreground">جمبري، بلطي، أسماك، قشريات ورخويات</span>
             </span>
             <ArrowLeft className="size-4 text-muted-foreground" />
           </Link>
