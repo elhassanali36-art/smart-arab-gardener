@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { askPlantExpert } from "@/lib/plant-expert.functions";
 import { guideImages } from "@/data/guide-images";
+import { expertPlantImage } from "@/data/expert-plant-images";
 import type { PlantGuide } from "@/lib/plant-expert.shared";
 import { useI18n } from "@/lib/i18n";
 
@@ -61,6 +62,9 @@ function Expert() {
   };
 
   const guide = mutation.data;
+  const resultImage = guide
+    ? expertPlantImage(query, guide.nameLocal, guide.nameEnglish, guide.scientificName)
+    : guideImages.expert;
   const errorMessage = mutation.error
     ? mutation.error.message.includes("429")
       ? t("expert.rate")
@@ -138,12 +142,12 @@ function Expert() {
         <div className="mt-6 space-y-4 pb-4">
           <div className="surface-card px-5 py-6 text-center">
             <img
-              src={guideImages.expert}
+              src={resultImage}
               alt={guide.nameLocal}
               loading="lazy"
-              width={320}
-              height={320}
-              className="mx-auto size-24 rounded-full object-cover ring-2 ring-gold/40"
+              width={1024}
+              height={1024}
+              className="mx-auto aspect-square w-full max-w-sm rounded-[18px] object-cover ring-2 ring-gold/40"
             />
 
             <h2 className="mt-3 font-display text-xl font-extrabold text-foreground">
