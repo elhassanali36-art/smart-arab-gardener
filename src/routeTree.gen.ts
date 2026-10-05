@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AccountRouteImport } from './routes/account'
+import { Route as AquacultureRouteImport } from './routes/aquaculture'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CompostRouteImport } from './routes/compost'
 import { Route as ExpertRouteImport } from './routes/expert'
@@ -33,6 +34,11 @@ const IndexRoute = IndexRouteImport.update({
 const AccountRoute = AccountRouteImport.update({
   id: '/account',
   path: '/account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AquacultureRoute = AquacultureRouteImport.update({
+  id: '/aquaculture',
+  path: '/aquaculture',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -104,6 +110,7 @@ const PlantsPlantIdRoute = PlantsPlantIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/aquaculture': typeof AquacultureRoute
   '/auth': typeof AuthRoute
   '/compost': typeof CompostRoute
   '/expert': typeof ExpertRoute
@@ -121,6 +128,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/aquaculture': typeof AquacultureRoute
   '/auth': typeof AuthRoute
   '/compost': typeof CompostRoute
   '/expert': typeof ExpertRoute
@@ -139,6 +147,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
+  '/aquaculture': typeof AquacultureRoute
   '/auth': typeof AuthRoute
   '/compost': typeof CompostRoute
   '/expert': typeof ExpertRoute
@@ -158,6 +167,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/account'
+    | '/aquaculture'
     | '/auth'
     | '/compost'
     | '/expert'
@@ -175,6 +185,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/account'
+    | '/aquaculture'
     | '/auth'
     | '/compost'
     | '/expert'
@@ -192,6 +203,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/account'
+    | '/aquaculture'
     | '/auth'
     | '/compost'
     | '/expert'
@@ -210,6 +222,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AccountRoute: typeof AccountRoute
+  AquacultureRoute: typeof AquacultureRoute
   AuthRoute: typeof AuthRoute
   CompostRoute: typeof CompostRoute
   ExpertRoute: typeof ExpertRoute
@@ -239,6 +252,13 @@ declare module '@tanstack/react-router' {
       path: '/account'
       fullPath: '/account'
       preLoaderRoute: typeof AccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aquaculture': {
+      id: '/aquaculture'
+      path: '/aquaculture'
+      fullPath: '/aquaculture'
+      preLoaderRoute: typeof AquacultureRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -338,6 +358,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AccountRoute: AccountRoute,
+  AquacultureRoute: AquacultureRoute,
   AuthRoute: AuthRoute,
   CompostRoute: CompostRoute,
   ExpertRoute: ExpertRoute,
