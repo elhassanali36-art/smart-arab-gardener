@@ -1,14 +1,42 @@
-# Welcome to your Lovable project
+# المزارع الذكي (08)
+
+ابنِ تطبيق ويب عربي (RTL بالكامل) اسمه "المزارع الذكي" يساعد الهواة والمزارعين الصغار على معرفة ماذا يمكنهم زراعته الآن حسب موقعهم وتاريخ اليوم والمناخ.
+
+الهوية البصرية: خلفية بيج فاتح دافئ (#F7F5EF)، أخضر أساسي (#2D6937) وأخضر داكن للنصوص (#1B3B21)، لمسات ذهبية (#C9A24C) للتفاصيل والحدود، بطاقات بيضاء بحواف دائرية ناعمة (16-20px)، خط عربي واضح (استخدم خط Cairo أو Tajawal من Google Fonts). التصميم عصري ودافئ وبسيط يوحي بالزراعة والطبيعة.
+
+الشاشات المطلوبة:
+
+1) الرئيسية: ترحيب بالمستخدم، بطاقتان (الموقع الحالي + تاريخ اليوم)، شريط يعرض حالة المناخ الحالية، زر كبير بارز "ماذا يمكنني أن أزرع الآن؟" يؤدي لشاشة النتائج، وقسم "الأكثر بحثاً هذا الأسبوع" بشكل شرائح (chips).
+
+2) نتائج الزراعة المناسبة: عنوان + شريحة صغيرة تعرض الموقع والتاريخ والمناخ، تبويبات (الكل / أصص وشرفات / حديقة مفتوحة)، وقائمة بطاقات نباتات — كل بطاقة فيها: أيقونة/صورة، الاسم بالعربي والإنجليزي، مدة النضج التقريبية، ووسم لمستوى الصعوبة (سهل/متوسط). عرّف بيانات (Array) لعدة نباتات مع موسم زراعتها (شتوي/صيفي/معتدل) واعرض فقط ما يناسب الشهر الحالي فعلياً (استخدم تاريخ اليوم الفعلي في الكود).
+
+3) تفاصيل النبات: صورة/رمز كبير للنبات، الاسم العربي والعلمي، صف إحصائيات سريعة (مدة النضج، الري، الشمس، نوع التربة)، ثم أقسام تفصيلية:
+   - طريقة الزراعة (خطوات نصية)
+   - الأسمدة ومواعيد استخدامها
+   - الأمراض والآفات الشائعة في هذا الموسم تحديداً (بطاقة بلون تحذيري مائل للبرتقالي/الذهبي)
+   - علامات النضج وموعد الحصاد
+
+4) البحث والفلاتر: شريط بحث نصي، وفلاتر قابلة للاختيار (نوع المساحة: أصص/شرفة - حديقة مفتوحة - داخل المنزل | مدة النضج | مستوى الصعوبة)، وزر "تطبيق الفلاتر".
+
+5) حسابي: صفحة بسيطة فيها اسم المستخدم، المدينة المحفوظة، قائمة "نباتاتي المفضلة"، وإعدادات بسيطة (تغيير الموقع، تغيير اللغة placeholder فقط).
+
+أضف شريط تنقل سفلي ثابت بأربعة أيقونات: الرئيسية / استكشاف (بحث) / مفضلتي / حسابي.
+
+اجعل بيانات النباتات (10-15 نبتة على الأقل: طماطم، ريحان، فلفل حار، خيار، نعناع، باذنجان، خس، فجل، بصل أخضر، فراولة) في ملف بيانات منظم بحيث يسهل لاحقاً استبدالها بـ API حقيقي. أضف تعليقاً واضحاً في الكود يوضح أين يجب لاحقاً ربط API طقس وموقع جغرافي حقيقي بدل البيانات الوهمية.
+
+اجعل الموقع الافتراضي "الرياض، السعودية" والتاريخ يُقرأ من تاريخ اليوم الفعلي في المتصفح.
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://smart-arab-gardener.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/88feb0f3-4bdd-4a74-97aa-9131006ccbfa).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +48,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
