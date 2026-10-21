@@ -1,0 +1,3 @@
+{
+  "_readme": "Add one entry per image, keyed by path under src/assets, e.g. \"poultry/duck.jpg\": { sourceUrl, creator, license, licenseUrl, attribution, retrieved, verification: \"verified\", visualInspection }. An image counts as verified only with verification=verified AND sourceUrl AND license. Empty on purpose: no source has been verified yet."
+}

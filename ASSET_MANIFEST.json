@@ -1,0 +1,1152 @@
+{
+  "generatedBy": "scripts/validate-assets.mjs",
+  "note": "Licence/source/author are NOT recorded in the repository; see ASSET_INVENTORY.md. Pointer image bytes are not in the repo.",
+  "summary": {
+    "verifiedGenuinePhotos": 0,
+    "verifiedLicences": 0,
+    "plantsInSource": 31,
+    "plantsWithPhotoReference": 31,
+    "poultrySpeciesMappedToSingleSpeciesImage": 11,
+    "unverifiedAssets": 56,
+    "staticAssetImports": 57,
+    "distinctBundledFiles": 56,
+    "jpegFiles": 25,
+    "assetPointers": 31,
+    "imgTagsInSource": 11,
+    "imgTagsWithoutAlt": 0,
+    "remoteImageUrlsInSource": [
+      "src/routes/__root.tsx: https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6ccf65c-5c50-46e0-9371-cdea9eca0d98/i",
+      "src/routes/__root.tsx: https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c6ccf65c-5c50-46e0-9371-cdea9eca0d98/i…"
+    ],
+    "unreferencedAssets": []
+  },
+  "assets": [
+    {
+      "file": "src/assets/aquaculture/hero.jpg",
+      "bytes": 197441,
+      "sha256": "33b7990c4aee96dbb0d6aefb65fea290d14bb2f8f1244dc424ba437e83f18ffd",
+      "usedBy": [
+        "src/routes/aquaculture.tsx"
+      ],
+      "kind": "jpeg",
+      "subject": "Aquaculture pond with aerators and a basket of fish",
+      "assetPath": "src/assets/aquaculture/hero.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/guides/compost.jpg",
+      "bytes": 148044,
+      "sha256": "b01cc70116f4ef1a9b64c51571e8c6d0d451882584d5cd8d3c5184fd15e1848b",
+      "usedBy": [
+        "src/data/guide-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Hands handling compost soil in a wooden bin",
+      "assetPath": "src/assets/guides/compost.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/guides/expert.jpg",
+      "bytes": 118837,
+      "sha256": "6b196841423912231452d8ba7046b575980c0feac69b99828ec357739c435fed",
+      "usedBy": [
+        "src/data/guide-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Hands with a tablet among crop plants (generic; used only as page hero)",
+      "assetPath": "src/assets/guides/expert.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/guides/fodder.jpg",
+      "bytes": 219704,
+      "sha256": "ba8d6d40b4bc0cea8e7f0f7fb47de1d3034bc5a2bf4b357f2d0a9d7b34efa2f8",
+      "usedBy": [
+        "src/data/guide-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Green fodder field with hay bales",
+      "assetPath": "src/assets/guides/fodder.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/guides/greenhouse.jpg",
+      "bytes": 272822,
+      "sha256": "e74bac468f5a982948d8cc2944a12a6c20e305b8a1ca4e8ccd4afa7fc6f09dd1",
+      "usedBy": [
+        "src/data/guide-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Greenhouse interior with tomato plants",
+      "assetPath": "src/assets/guides/greenhouse.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/guides/hydroponics.jpg",
+      "bytes": 97116,
+      "sha256": "4e91ab6317118eee56dc6c8b057e4b4d1abb9f39431ece5c9f374264c11c6cf8",
+      "usedBy": [
+        "src/data/guide-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "NFT hydroponic lettuce channels",
+      "assetPath": "src/assets/guides/hydroponics.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/guides/vertical.jpg",
+      "bytes": 155183,
+      "sha256": "9345e04cbb1359852ae16be08a1e6c933a5cc77509c455d669c0a08e7a0659fe",
+      "usedBy": [
+        "src/data/guide-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Rooftop vertical growing racks",
+      "assetPath": "src/assets/guides/vertical.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/livestock/camels.jpg",
+      "bytes": 62388,
+      "sha256": "9aff70a4f68cc98e391ebdbb83eac8ede0c50ea1bb6270324a28e5b02713c92e",
+      "usedBy": [
+        "src/data/livestock-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Camel herd at sunset (species level)",
+      "assetPath": "src/assets/livestock/camels.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/livestock/cattle.jpg",
+      "bytes": 85593,
+      "sha256": "a91367c27b8ee8931990e9b7ce292feed54ee015be14e83871431adf40de768c",
+      "usedBy": [
+        "src/data/livestock-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Black-and-white dairy cattle (species level)",
+      "assetPath": "src/assets/livestock/cattle.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/livestock/goats.jpg",
+      "bytes": 98389,
+      "sha256": "d254716c7bb604d38803fbeb5f87d726eac10c2ea7b5f37e549e5afa336746f7",
+      "usedBy": [
+        "src/data/livestock-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Goats (species level)",
+      "assetPath": "src/assets/livestock/goats.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/livestock/poultry.jpg",
+      "bytes": 95172,
+      "sha256": "0ba4ed83b06ad30df5b9bc52bbeff798a2e773d78e9902b9b36cda5492585604",
+      "usedBy": [
+        "src/data/livestock-images.ts",
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Chickens in a coop (species level)",
+      "assetPath": "src/assets/livestock/poultry.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/livestock/sheep.jpg",
+      "bytes": 97995,
+      "sha256": "51e05f9f1755abbfcf40c48a3cbfb36df80f118d6363e20a961d4c31e50238a8",
+      "usedBy": [
+        "src/data/livestock-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Sheep flock (species level)",
+      "assetPath": "src/assets/livestock/sheep.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/alfalfa.jpg.asset.json",
+      "bytes": 440,
+      "sha256": "9c75ecfd925ba33b6b55660539ad95d39683330feaa9f38517205f383e5e52eb",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/71af325d-8136-4e81-b02e-e295a1278674/alfalfa.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): alfalfa",
+      "assetPath": "src/assets/plants/alfalfa.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/arugula.jpg.asset.json",
+      "bytes": 441,
+      "sha256": "5b9a81475e13569f14019e5247973be6af3db5e26f0cd894ac0f859910835fb5",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/d34254c6-0e10-4eb3-802d-7ec17794cbbf/arugula.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): arugula",
+      "assetPath": "src/assets/plants/arugula.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/basil.jpg.asset.json",
+      "bytes": 435,
+      "sha256": "92e5745e56490795e43c58094fd6876c30a6f267ef3bedc2cd5f2c198027d695",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/5ac2fe02-9797-4ba0-acca-eff30e3e5770/basil.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): basil",
+      "assetPath": "src/assets/plants/basil.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/bougainvillea.jpg.asset.json",
+      "bytes": 459,
+      "sha256": "dc42fbc7e3ecab3e10d6accb59ee3688e847c76f4bef1fef03180ba96691b320",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/7b379f55-f5bc-4898-8d60-c0b2466c8e8b/bougainvillea.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): bougainvillea",
+      "assetPath": "src/assets/plants/bougainvillea.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/carrot.jpg.asset.json",
+      "bytes": 438,
+      "sha256": "64b145bd5c87f9adfc0665aeb5674e983ef064dfbed22941b44362afd2f9539f",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/4577fb9c-31f4-48d2-9f23-88be1fe4af4b/carrot.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): carrot",
+      "assetPath": "src/assets/plants/carrot.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/chili.jpg.asset.json",
+      "bytes": 434,
+      "sha256": "79910175241e57356460851f902d23715bda4e1af3af617a3f0027f135ef3535",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/d9c553bf-4d82-4cdc-ae80-582762871cd0/chili.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): chili",
+      "assetPath": "src/assets/plants/chili.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/cucumber.jpg.asset.json",
+      "bytes": 444,
+      "sha256": "011abfd4dc18171baa9403f683a03a590547b0e10abf72c44f7bd6399c4fc5f2",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/814839ae-cfd5-4441-82af-02c3a2939700/cucumber.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): cucumber",
+      "assetPath": "src/assets/plants/cucumber.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/damask-rose.jpg.asset.json",
+      "bytes": 453,
+      "sha256": "7903e635530b980c3126c8a652b378b38de9e20d28608cc0bae1af33144128ba",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/be7cb8da-dcc4-4a99-a931-a7ca91d27f5c/damask-rose.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): damask-rose",
+      "assetPath": "src/assets/plants/damask-rose.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/date-palm.jpg.asset.json",
+      "bytes": 447,
+      "sha256": "452f025bc62a69e1b7230a478fc8cb2e3d1d311b0d2519794e81ee59de038d35",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/14305f3d-23a9-4899-8b1b-0eafa4ec76ca/date-palm.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): date-palm",
+      "assetPath": "src/assets/plants/date-palm.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/eggplant.jpg.asset.json",
+      "bytes": 444,
+      "sha256": "d175f06bd8146b8aadf26287e84dd55aee6f53c66091ecc5b32fd379d4566820",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/193d9628-7d0e-4eb6-827d-73d17cf3fde0/eggplant.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): eggplant",
+      "assetPath": "src/assets/plants/eggplant.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/expert-cashew.jpg",
+      "bytes": 180583,
+      "sha256": "47687e74b0be4c00bd8c7c62d1cb33ca450e63d4cf0a3ae7bdf572fcb5738e55",
+      "usedBy": [
+        "src/data/expert-plant-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Cashew apples on tree",
+      "assetPath": "src/assets/plants/expert-cashew.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/expert-coffee.jpg",
+      "bytes": 168456,
+      "sha256": "134e0a75486f885702bf17cd7015c50b09e8562de9f6322a001358e1d3547e11",
+      "usedBy": [
+        "src/data/expert-plant-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Coffee cherries on branch",
+      "assetPath": "src/assets/plants/expert-coffee.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/expert-mango.jpg",
+      "bytes": 207073,
+      "sha256": "86ad36b12825dac09d3336317eff34d5cdf8a145e0329b2847e1826e31f4a2c9",
+      "usedBy": [
+        "src/data/expert-plant-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Mango fruit on tree",
+      "assetPath": "src/assets/plants/expert-mango.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/expert-wheat.jpg",
+      "bytes": 189260,
+      "sha256": "23922a62e45c377d8e660fdccc8f3feb6c2b0dca1db5b7127c29bddafdfd1a33",
+      "usedBy": [
+        "src/data/expert-plant-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Wheat ears",
+      "assetPath": "src/assets/plants/expert-wheat.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/ficus-nitida.jpg.asset.json",
+      "bytes": 456,
+      "sha256": "e8858b4348838c17a66a62fe939a7ba1091b95e77735e791b23ffe353deea070",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/9da64686-9230-4f1d-a710-d168b5f08c40/ficus-nitida.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): ficus-nitida",
+      "assetPath": "src/assets/plants/ficus-nitida.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/fig-tree.jpg.asset.json",
+      "bytes": 443,
+      "sha256": "b7b2c71dc912ce586522954505448cb9fed424daa2ac6e09f62751877288781f",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/ae1acd33-511d-4db1-b13b-2f4fec3dc3ec/fig-tree.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): fig-tree",
+      "assetPath": "src/assets/plants/fig-tree.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/ghaf.jpg.asset.json",
+      "bytes": 432,
+      "sha256": "78a212a4feecef3f75d8ff91c8f924901ea431d4ce658cb6053472ef60e0df96",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/8d5cbe1c-4781-480d-b2e5-5e6deb2f0ea2/ghaf.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): ghaf",
+      "assetPath": "src/assets/plants/ghaf.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/green-onion.jpg.asset.json",
+      "bytes": 453,
+      "sha256": "c41c657003cae6f1ced4f76becfbadd1d98b76290e091b0e0a554bdf44c78383",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/f5347d2e-0850-4b3c-8c7c-54c6b80c5022/green-onion.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): green-onion",
+      "assetPath": "src/assets/plants/green-onion.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/jasmine.jpg.asset.json",
+      "bytes": 441,
+      "sha256": "b36d09d1fb2a7e928ea5c6451898871d0821b22584851807877857c849bee835",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/745c4d70-3760-4466-8c96-c5f127d740f1/jasmine.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): jasmine",
+      "assetPath": "src/assets/plants/jasmine.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/lemon-tree.jpg.asset.json",
+      "bytes": 450,
+      "sha256": "01dca30354c0d6dcb880b25511972f2fc2eda99ba16dd8988fed853865a339c9",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/ea44d08b-f0ce-47ca-88af-afb959ab46fb/lemon-tree.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): lemon-tree",
+      "assetPath": "src/assets/plants/lemon-tree.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/lettuce.jpg.asset.json",
+      "bytes": 441,
+      "sha256": "37e81c3531dd3d84856ada74e3dfb15f40d37b1166cef969407a333969b4f549",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/39d94d3b-0260-49de-8056-a8700a776b48/lettuce.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): lettuce",
+      "assetPath": "src/assets/plants/lettuce.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/marigold.jpg.asset.json",
+      "bytes": 443,
+      "sha256": "8f984cbe66683edc3133b0a69c953b0bba8471ea8f667f0e96e04c506d1cd5f6",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/6a20fee4-cff7-41de-a993-2c913be7df15/marigold.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): marigold",
+      "assetPath": "src/assets/plants/marigold.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/mint.jpg.asset.json",
+      "bytes": 432,
+      "sha256": "86de59431b256c2c615796a31e422f532c019a9753f5728564b99b93e0972c6e",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/08b56b0f-d993-42cd-a8de-21a722601d13/mint.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): mint",
+      "assetPath": "src/assets/plants/mint.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/neem.jpg.asset.json",
+      "bytes": 432,
+      "sha256": "8b1c29e877aa485e4e022810f738b3fdc64c97e85e2068656be840d1bb95bd20",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/2e8ea2f3-a464-431e-a377-8695eecce2f5/neem.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): neem",
+      "assetPath": "src/assets/plants/neem.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/okra.jpg.asset.json",
+      "bytes": 432,
+      "sha256": "1d75f39b039705abac4780a41b0c08d9e9edc5d96a1b09759c78c535a6eaf9db",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/92a766d9-a6ba-4d1e-922c-8da0f8824f48/okra.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): okra",
+      "assetPath": "src/assets/plants/okra.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/olive-tree.jpg.asset.json",
+      "bytes": 450,
+      "sha256": "e01bc276fe35c45986808753765a67262cfa82b4f76bf8a81f02c0a6315b98ed",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/aada333f-9230-460d-a21f-d1b8a867081d/olive-tree.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): olive-tree",
+      "assetPath": "src/assets/plants/olive-tree.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/parsley.jpg.asset.json",
+      "bytes": 441,
+      "sha256": "74878858b13abb48d05ed3c16fcbef1cbc1db3754d96909c7ebd390d5af40a1b",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/1de98032-2830-4e1a-9095-3a7c0eb01ca0/parsley.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): parsley",
+      "assetPath": "src/assets/plants/parsley.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/petunia.jpg.asset.json",
+      "bytes": 441,
+      "sha256": "c6b2933878126ecedc7eee4abe10a88c2649b552507d9227cc353ff62d7f074f",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/9258fc44-3bbc-4d10-95d4-83e6d4bb5cb0/petunia.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): petunia",
+      "assetPath": "src/assets/plants/petunia.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/pomegranate.jpg.asset.json",
+      "bytes": 453,
+      "sha256": "290e1073681facc4cf49b54cbad66001b0450d43bc2387cd5dab440351a85c61",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/ea88ca8f-5f2d-4e0b-996c-4d0f48bf233d/pomegranate.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): pomegranate",
+      "assetPath": "src/assets/plants/pomegranate.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/radish.jpg.asset.json",
+      "bytes": 438,
+      "sha256": "93e9d486b60790c9ef1d1dc6b35e9e1942410d5151a112ced6090933e006d8c4",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/a78bd648-b47f-48f7-b1bc-b08eb6b2f715/radish.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): radish",
+      "assetPath": "src/assets/plants/radish.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/rhodes-grass.jpg.asset.json",
+      "bytes": 456,
+      "sha256": "ed633c9e5dfd21153f34259d4ddf4aa73b45f023ddfd817e25541388f4dcead7",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/8576bda9-eb8d-4884-80eb-6ab796753527/rhodes-grass.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): rhodes-grass",
+      "assetPath": "src/assets/plants/rhodes-grass.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/sorghum-fodder.jpg.asset.json",
+      "bytes": 462,
+      "sha256": "282559676f729750888bfaf0bca4477fff86d09c063f6152fb0a17856d79b9be",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/aeec6a5f-15ac-4321-85e8-f3d6c4bc3884/sorghum-fodder.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): sorghum-fodder",
+      "assetPath": "src/assets/plants/sorghum-fodder.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/spinach.jpg.asset.json",
+      "bytes": 441,
+      "sha256": "5373433db2f60126ed50417fafc37021b69db28a1b81ecfc68d7c40b0a56eab9",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/3e2df7c0-c89e-42ed-9608-1fc0a0284362/spinach.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): spinach",
+      "assetPath": "src/assets/plants/spinach.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/strawberry.jpg.asset.json",
+      "bytes": 450,
+      "sha256": "b47e736aa8460ae4bc1f35deae45a165f4e16dc4d93f98da55634c1226c136ef",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/6ebcca78-b818-49ed-9901-dcbb25e093e6/strawberry.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): strawberry",
+      "assetPath": "src/assets/plants/strawberry.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/plants/tomato.jpg.asset.json",
+      "bytes": 437,
+      "sha256": "e6cf11ff3d0845a0310a5c5ee4b567cb788fcaa44439b5d5f8646d1313fd2e79",
+      "usedBy": [
+        "src/data/plant-images.ts"
+      ],
+      "kind": "lovable-asset-pointer",
+      "pointerUrl": "/__l5e/assets-v1/87741a00-7f4b-4634-bfc1-121a551cd307/tomato.jpg",
+      "bytesNotInRepo": true,
+      "subject": "Plant photo pointer (image bytes not in repo): tomato",
+      "assetPath": "src/assets/plants/tomato.jpg.asset.json",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "not inspectable: image bytes are not in the repository",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/poultry/birds-grid.jpg",
+      "bytes": 528347,
+      "sha256": "9d1ba7ab0b52afa99919bbc059342073a7e8852458fbf2ea9166ab40e4b913cd",
+      "usedBy": [
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "2x2 collage: ducks, geese, quail, turkeys (family header image)",
+      "assetPath": "src/assets/poultry/birds-grid.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/poultry/duck.jpg",
+      "bytes": 136608,
+      "sha256": "7a3dfd0b4127a73b87ab4118dc36657b8b4e09bf000609c54493d52c78920533",
+      "usedBy": [
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Ducks (crop of birds-grid)",
+      "assetPath": "src/assets/poultry/duck.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/poultry/goose.jpg",
+      "bytes": 135340,
+      "sha256": "f603c8b1a128a53a05a7d979becdce21b2bf33ba5e00c32616c151ac8cb28e42",
+      "usedBy": [
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Geese (crop of birds-grid)",
+      "assetPath": "src/assets/poultry/goose.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/poultry/guinea-fowl.jpg",
+      "bytes": 182629,
+      "sha256": "ec973862bea01620e79a7562d38a4542dab3afdd1213c0f0fea2e1db7e31c46d",
+      "usedBy": [
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Guinea fowl (crop of small-grid)",
+      "assetPath": "src/assets/poultry/guinea-fowl.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/poultry/pigeon.jpg",
+      "bytes": 94946,
+      "sha256": "862719423dc63ea5a7cbe38c1acd2c1e3c9c961073e83a6e78d2070f8f940aa8",
+      "usedBy": [
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Pigeons (crop of small-grid)",
+      "assetPath": "src/assets/poultry/pigeon.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/poultry/quail.jpg",
+      "bytes": 150177,
+      "sha256": "221bce56e1d0852704ac456167e062dda12e038db95fae7172062615915f12dc",
+      "usedBy": [
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Quail (crop of birds-grid)",
+      "assetPath": "src/assets/poultry/quail.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/poultry/rabbit.jpg",
+      "bytes": 127774,
+      "sha256": "14b3b97305d9a36117daadba9520062955018378a2d765e69f6809e650ef3b6b",
+      "usedBy": [
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Rabbits (crop of small-grid)",
+      "assetPath": "src/assets/poultry/rabbit.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/poultry/small-grid.jpg",
+      "bytes": 520074,
+      "sha256": "63b79e7cd359e161eb785e84a60559d04965f5115c82e5af4a56998872423daa",
+      "usedBy": [
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "2x2 collage: pigeons, guinea fowl, rabbits, chickens (family header image)",
+      "assetPath": "src/assets/poultry/small-grid.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    },
+    {
+      "file": "src/assets/poultry/turkey.jpg",
+      "bytes": 138676,
+      "sha256": "3ec99f2563594c4a2f58992097586836c6dc415719cd47eab72849985b1f3402",
+      "usedBy": [
+        "src/data/poultry-images.ts"
+      ],
+      "kind": "jpeg",
+      "subject": "Turkeys (crop of birds-grid)",
+      "assetPath": "src/assets/poultry/turkey.jpg",
+      "sourceUrl": null,
+      "creator": null,
+      "license": null,
+      "licenseUrl": null,
+      "attribution": null,
+      "retrieved": null,
+      "visualInspection": "inspected by eye 2026-10-17 (subject confirmed; authenticity not determinable)",
+      "verification": "unverified"
+    }
+  ]
+}
